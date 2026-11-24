@@ -1,6 +1,6 @@
 # darugoro-site
 
-The download page for [DaruGoro](https://github.com/AmmyK/darugoro-site/releases), served with GitHub Pages.
+The download page for [DaruGoro](https://github.com/amam335345/darugoro-site/releases), served with GitHub Pages.
 DaruGoro の配布ページです。GitHub Pages で公開しています。
 
 - `index.html` — the page (no external fonts or scripts)
