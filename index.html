@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -130,8 +130,8 @@
   <div class="wrap">
     <a class="brand" href="#top"><img src="images/icon.png" alt="">DaruGoro</a>
     <nav class="lang" aria-label="Language">
-      <a href="#english" hreflang="en">English</a>
       <a href="#japanese" hreflang="ja">日本語</a>
+      <a href="#english" hreflang="en">English</a>
     </nav>
   </div>
 </header>
@@ -141,19 +141,88 @@
     <div class="wrap">
       <img class="icon" src="images/icon.png" alt="DaruGoro app icon">
       <h1>DaruGoro</h1>
-      <p class="tag">Control your DAW from the sofa — with a PS5 DualSense controller.</p>
-      <p class="tag" lang="ja">ソファでゴロゴロしながら、PS5コントローラーでDAWを操作するMacアプリ。</p>
+      <p class="tag">ソファでゴロゴロしながら、PS5コントローラーでDAWを操作するMacアプリ。</p>
+      <p class="tag" lang="en">Control your DAW from the sofa — with a PS5 DualSense controller.</p>
       <div class="cta">
-        <a class="btn primary" href="https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg">Download for Mac</a>
-        <a class="btn secondary" href="#japanese" lang="ja">日本語で読む</a>
+        <a class="btn primary" href="https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg" lang="en">Download for Mac</a>
+        <a class="btn secondary" href="#english" lang="en">Read in English</a>
       </div>
-      <p class="note">Free · macOS 12 or later · 無料 · macOS 12 以降</p>
+      <p class="note">無料 · macOS 12 以降 · Free · macOS 12 or later</p>
       <div class="shot">
         <img src="images/main-window.png" width="1600" height="1030"
              alt="DaruGoro settings window showing a Logic Pro preset: each controller button is labelled with the shortcut it sends.">
       </div>
     </div>
   </div>
+
+  <!-- ===================== 日本語 ===================== -->
+  <section class="lang-block" id="japanese" lang="ja">
+    <div class="wrap">
+      <h2>日本語</h2>
+
+      <h3>できること</h3>
+      <p class="lead">DaruGoro（だるごろ）は、PS5（DualSense）コントローラーを Mac の DAW コントローラーにするアプリです。ボタンを押すと、前面にある DAW（Logic Pro / Studio One）に合わせて割り当てたキーボードショートカットを送ります。デスクに向かわず、ソファでくつろいだまま、再生・録音・編集・ミックスができます。</p>
+
+      <ul class="features">
+        <li><b>DAW ごとのプリセット</b><span>Logic Pro と Studio One のプリセットを用意。編集・並べ替え・書き出し・読み込みが自由にできます。</span></li>
+        <li><b>R2 でプリセットを切り替え</b><span>R2 を引いたまま右スティックを倒すと、円形のメニューからプリセットを選べます。</span></li>
+        <li><b>L1 の編集レイヤー</b><span>L1 を押している間、顔ボタンと十字キーが編集用の操作に切り替わります。</span></li>
+        <li><b>スティックを好きな役割に</b><span>十字キー・スクロール・マウスカーソル・矢印キーから選べます。</span></li>
+        <li><b>タッチパッドでマウス操作</b><span>コントローラーのタッチパッドで、移動・クリック・ドラッグができます。</span></li>
+        <li><b>操作ヘルプ</b><span>CREATE ボタンで、全部の割り当てをコントローラーの絵の周りに表示します。</span></li>
+      </ul>
+
+      <div class="moves">
+        <figure class="wide">
+          <img src="images/darugoro-help.gif" width="760" height="404" loading="lazy"
+               alt="操作ヘルプ。右スティックを倒すと、光る項目がボタンからボタンへ移っていく。">
+          <figcaption>操作ヘルプ。スティックを倒すと、そのボタンの操作が光ります。</figcaption>
+        </figure>
+        <figure class="radial">
+          <img src="images/darugoro-radial.gif" width="420" height="420" loading="lazy"
+               alt="プリセットの円。R2 を引いて右スティックで選び、R2 を離すと切り替わる。">
+          <figcaption>R2 を引いて右スティックを回し、プリセットを切り替えます。</figcaption>
+        </figure>
+        <figure>
+          <img src="images/darugoro-cards.gif" width="760" height="573" loading="lazy"
+               alt="設定ウインドウ。ボタンを選ぶと、そのキーと修飾キーと役割が下に出る。">
+          <figcaption>設定ウインドウでボタンを選ぶと、キーを変えられます。</figcaption>
+        </figure>
+      </div>
+
+      <h3>動作環境</h3>
+      <ul class="req">
+        <li>macOS 12 Monterey 以降</li>
+        <li>PS5 DualSense ワイヤレスコントローラー（Bluetooth または USB）</li>
+        <li>Logic Pro または Studio One（その他のアプリは「デフォルト」のプリセットで動きます）</li>
+      </ul>
+
+      <h3>ダウンロード</h3>
+      <div class="card">
+        <p>DaruGoro は無料です。Developer ID で署名し、Apple の公証を受けています。</p>
+        <a class="btn primary" href="https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg">DaruGoro をダウンロード（.dmg）</a>
+        <p class="note" style="margin-top:12px">更新内容と過去の版は <a href="https://github.com/amam335345/darugoro-site/releases">GitHub Releases</a> にあります。</p>
+      </div>
+
+      <h3>はじめて使うとき</h3>
+      <ol class="steps">
+        <li><b>コントローラーをつなぐ。</b>PS ボタンと CREATE ボタンを同時に長押しし、ライトバーが点滅したら、<span class="path">システム設定 › Bluetooth</span> で「DualSense Wireless Controller」に接続します。USB ケーブルでもつなげます。</li>
+        <li><b>DaruGoro を開き</b>、たずねられたらアクセシビリティを許可します。<span class="path">システム設定 › プライバシーとセキュリティ › アクセシビリティ</span> で DaruGoro をオンにします。DAW にキーを送るために必要です。</li>
+        <li><b>DAW を前面にする。</b>DaruGoro のウインドウの上に、DAW の名前とプリセットが出れば準備完了です。</li>
+        <li><b>ボタンを押す。</b>割り当てたショートカットが DAW に送られます。CREATE ボタンで、いつでも割り当てを確かめられます。</li>
+      </ol>
+
+      <h3>お礼について</h3>
+      <div class="card">
+        <p>DaruGoro が役に立ったら、お礼を送っていただけます。任意です。返信や返礼はお約束していません。</p>
+        <!-- AMA-190: お礼の行き先は Ko-fi -->
+        <a class="btn secondary" href="https://ko-fi.com/amam335345" target="_blank" rel="noopener">Ko-fi でお礼を送る</a>
+      </div>
+
+      <h3>商標について</h3>
+      <p class="tm">DualSense、PlayStation および PS5 は Sony Interactive Entertainment Inc. の、Logic Pro は Apple Inc. の商標または登録商標です。DaruGoro はこれらの企業と提携しておらず、承認も受けていません。</p>
+    </div>
+  </section>
 
   <!-- ===================== English ===================== -->
   <section class="lang-block" id="english" lang="en">
@@ -224,78 +293,9 @@
       <p class="tm">DualSense, PlayStation and PS5 are trademarks or registered trademarks of Sony Interactive Entertainment Inc., and Logic Pro is a trademark or registered trademark of Apple Inc. DaruGoro is not affiliated with, nor endorsed by, these companies.</p>
     </div>
   </section>
-
-  <!-- ===================== 日本語 ===================== -->
-  <section class="lang-block" id="japanese" lang="ja">
-    <div class="wrap">
-      <h2>日本語</h2>
-
-      <h3>できること</h3>
-      <p class="lead">DaruGoro（だるごろ）は、PS5（DualSense）コントローラーを Mac の DAW コントローラーにするアプリです。ボタンを押すと、前面にある DAW（Logic Pro / Studio One）に合わせて割り当てたキーボードショートカットを送ります。デスクに向かわず、ソファでくつろいだまま、再生・録音・編集・ミックスができます。</p>
-
-      <ul class="features">
-        <li><b>DAW ごとのプリセット</b><span>Logic Pro と Studio One のプリセットを用意。編集・並べ替え・書き出し・読み込みが自由にできます。</span></li>
-        <li><b>R2 でプリセットを切り替え</b><span>R2 を引いたまま右スティックを倒すと、円形のメニューからプリセットを選べます。</span></li>
-        <li><b>L1 の編集レイヤー</b><span>L1 を押している間、顔ボタンと十字キーが編集用の操作に切り替わります。</span></li>
-        <li><b>スティックを好きな役割に</b><span>十字キー・スクロール・マウスカーソル・矢印キーから選べます。</span></li>
-        <li><b>タッチパッドでマウス操作</b><span>コントローラーのタッチパッドで、移動・クリック・ドラッグができます。</span></li>
-        <li><b>操作ヘルプ</b><span>CREATE ボタンで、全部の割り当てをコントローラーの絵の周りに表示します。</span></li>
-      </ul>
-
-      <div class="moves">
-        <figure class="wide">
-          <img src="images/darugoro-help.gif" width="760" height="404" loading="lazy"
-               alt="操作ヘルプ。右スティックを倒すと、光る項目がボタンからボタンへ移っていく。">
-          <figcaption>操作ヘルプ。スティックを倒すと、そのボタンの操作が光ります。</figcaption>
-        </figure>
-        <figure class="radial">
-          <img src="images/darugoro-radial.gif" width="420" height="420" loading="lazy"
-               alt="プリセットの円。R2 を引いて右スティックで選び、R2 を離すと切り替わる。">
-          <figcaption>R2 を引いて右スティックを回し、プリセットを切り替えます。</figcaption>
-        </figure>
-        <figure>
-          <img src="images/darugoro-cards.gif" width="760" height="573" loading="lazy"
-               alt="設定ウインドウ。ボタンを選ぶと、そのキーと修飾キーと役割が下に出る。">
-          <figcaption>設定ウインドウでボタンを選ぶと、キーを変えられます。</figcaption>
-        </figure>
-      </div>
-
-      <h3>動作環境</h3>
-      <ul class="req">
-        <li>macOS 12 Monterey 以降</li>
-        <li>PS5 DualSense ワイヤレスコントローラー（Bluetooth または USB）</li>
-        <li>Logic Pro または Studio One（その他のアプリは「デフォルト」のプリセットで動きます）</li>
-      </ul>
-
-      <h3>ダウンロード</h3>
-      <div class="card">
-        <p>DaruGoro は無料です。Developer ID で署名し、Apple の公証を受けています。</p>
-        <a class="btn primary" href="https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg">DaruGoro をダウンロード（.dmg）</a>
-        <p class="note" style="margin-top:12px">更新内容と過去の版は <a href="https://github.com/amam335345/darugoro-site/releases">GitHub Releases</a> にあります。</p>
-      </div>
-
-      <h3>はじめて使うとき</h3>
-      <ol class="steps">
-        <li><b>コントローラーをつなぐ。</b>PS ボタンと CREATE ボタンを同時に長押しし、ライトバーが点滅したら、<span class="path">システム設定 › Bluetooth</span> で「DualSense Wireless Controller」に接続します。USB ケーブルでもつなげます。</li>
-        <li><b>DaruGoro を開き</b>、たずねられたらアクセシビリティを許可します。<span class="path">システム設定 › プライバシーとセキュリティ › アクセシビリティ</span> で DaruGoro をオンにします。DAW にキーを送るために必要です。</li>
-        <li><b>DAW を前面にする。</b>DaruGoro のウインドウの上に、DAW の名前とプリセットが出れば準備完了です。</li>
-        <li><b>ボタンを押す。</b>割り当てたショートカットが DAW に送られます。CREATE ボタンで、いつでも割り当てを確かめられます。</li>
-      </ol>
-
-      <h3>お礼について</h3>
-      <div class="card">
-        <p>DaruGoro が役に立ったら、お礼を送っていただけます。任意です。返信や返礼はお約束していません。</p>
-        <!-- AMA-190: お礼の行き先は Ko-fi -->
-        <a class="btn secondary" href="https://ko-fi.com/amam335345" target="_blank" rel="noopener">Ko-fi でお礼を送る</a>
-      </div>
-
-      <h3>商標について</h3>
-      <p class="tm">DualSense、PlayStation および PS5 は Sony Interactive Entertainment Inc. の、Logic Pro は Apple Inc. の商標または登録商標です。DaruGoro はこれらの企業と提携しておらず、承認も受けていません。</p>
-    </div>
-  </section>
 </main>
 
-<footer>
+<footer lang="en">
   <div class="wrap">
     <span>© 2026 amam</span>
     <a href="https://github.com/amam335345/darugoro-site/releases">Releases</a>
