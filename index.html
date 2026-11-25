@@ -216,8 +216,15 @@
       <h3>アプリの消し方</h3>
       <p>DaruGoro.app をゴミ箱に入れるだけなら、プリセットや設定は Mac に残ります。入れ直すと、そのまま戻ります。すべて消したいときは、次のようにします。</p>
       <ol class="steps">
-        <li><b>DaruGoro を終了し</b>、DaruGoro.app をゴミ箱に入れます。</li>
-        <li><b>残ったデータを消す。</b>Finder の <span class="path">移動 › フォルダへ移動…</span>（Shift + Command + G）で次の場所を開き、ゴミ箱に入れます。<br><code>~/Library/Application Support/DaruGoro</code>（プリセット・共通設定・読み込んだキーコマンド一覧）<br><code>~/Library/Preferences/com.amamamam.DaruGoro.plist</code>（アプリの設定）<br>DAWPad という名前のころから使っていた場合は、<code>~/Library/Application Support/DAWPad</code> と <code>~/Library/Preferences/com.amamamam.DAWPad.plist</code> も消します。</li>
+        <li><b>「データを消して終了…」を選ぶ。</b>アプリのメニュー（DaruGoro の「DaruGoroを終了」の上）か、メニューバーの DaruGoro のアイコンのメニューにあります。</li>
+        <li><b>「消して終了」を押す。</b>プリセット・設定・アクセシビリティの許可（DAWPad という名前のころの分も）を消して、DaruGoro が終了します。</li>
+        <li><b>DaruGoro.app をゴミ箱に入れ</b>、ゴミ箱を空にします。</li>
+      </ol>
+      <p class="note" style="margin-top:12px"><span class="path">システム設定 › プライバシーとセキュリティ › アクセシビリティ</span> に DaruGoro が残っていたら、選んで「−」を押して外します。</p>
+
+      <p style="margin-top:20px"><b>アプリを先に消してしまったとき</b>は、残ったものを手で消せます。</p>
+      <ol class="steps">
+        <li><b>残ったデータを消す。</b>Finder の <span class="path">移動 › フォルダへ移動…</span>（Shift + Command + G）で次の場所を開き、ゴミ箱に入れます（無いものは飛ばします）。<br><code>~/Library/Application Support/DaruGoro</code>（プリセット・共通設定・読み込んだキーコマンド一覧）<br><code>~/Library/Preferences/com.amamamam.DaruGoro.plist</code>（アプリの設定）<br><code>~/Library/Saved Application State/com.amamamam.DaruGoro.savedState</code>（ウインドウの状態）<br><code>~/Library/Caches/com.amamamam.DaruGoro</code>（キャッシュ）<br>DAWPad という名前のころから使っていた場合は、上の4つの <code>DaruGoro</code> を <code>DAWPad</code> にしたものも消します。</li>
         <li><b>アクセシビリティの許可を外す。</b><span class="path">システム設定 › プライバシーとセキュリティ › アクセシビリティ</span> で DaruGoro を選び、「−」を押します（DAWPad の項目があれば、それも外します）。</li>
         <li><b>ゴミ箱を空にします。</b></li>
       </ol>
@@ -296,8 +303,15 @@
       <h3>Uninstalling</h3>
       <p>If you only move DaruGoro.app to the Trash, your presets and settings stay on your Mac, and they come back when you install it again. To remove everything:</p>
       <ol class="steps">
-        <li><b>Quit DaruGoro</b> and move DaruGoro.app to the Trash.</li>
-        <li><b>Remove the saved data.</b> In Finder, choose <span class="path">Go › Go to Folder…</span> (Shift-Command-G), open each of these, and move them to the Trash:<br><code>~/Library/Application Support/DaruGoro</code> (presets, common settings and imported key command lists)<br><code>~/Library/Preferences/com.amamamam.DaruGoro.plist</code> (app settings)<br>If you used the app back when it was called DAWPad, also remove <code>~/Library/Application Support/DAWPad</code> and <code>~/Library/Preferences/com.amamamam.DAWPad.plist</code>.</li>
+        <li><b>Choose “データを消して終了…” (Erase Data and Quit).</b> It is in the DaruGoro menu, just above “DaruGoroを終了” (Quit DaruGoro), and in the menu of the DaruGoro icon in the menu bar. The menus are in Japanese for now.</li>
+        <li><b>Click “消して終了” (Erase and Quit).</b> DaruGoro removes your presets, settings and its Accessibility permission (including those from its old name, DAWPad), then quits.</li>
+        <li><b>Move DaruGoro.app to the Trash</b> and empty the Trash.</li>
+      </ol>
+      <p class="note" style="margin-top:12px">If DaruGoro is still listed in <span class="path">System Settings › Privacy &amp; Security › Accessibility</span>, select it and click “−”.</p>
+
+      <p style="margin-top:20px"><b>If you already deleted the app</b>, you can remove the leftovers by hand:</p>
+      <ol class="steps">
+        <li><b>Remove the saved data.</b> In Finder, choose <span class="path">Go › Go to Folder…</span> (Shift-Command-G), open each of these, and move them to the Trash (skip any that do not exist):<br><code>~/Library/Application Support/DaruGoro</code> (presets, common settings and imported key command lists)<br><code>~/Library/Preferences/com.amamamam.DaruGoro.plist</code> (app settings)<br><code>~/Library/Saved Application State/com.amamamam.DaruGoro.savedState</code> (window state)<br><code>~/Library/Caches/com.amamamam.DaruGoro</code> (cache)<br>If you used the app back when it was called DAWPad, also remove the same four with <code>DAWPad</code> in place of <code>DaruGoro</code>.</li>
         <li><b>Remove Accessibility access.</b> In <span class="path">System Settings › Privacy &amp; Security › Accessibility</span>, select DaruGoro and click “−” (remove DAWPad too if it is listed).</li>
         <li><b>Empty the Trash.</b></li>
       </ol>
