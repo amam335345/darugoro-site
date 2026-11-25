@@ -51,7 +51,8 @@ DaruGoro は無料です。Developer ID で署名し、Apple の公証を受け�
 
 - **[DaruGoro をダウンロード（.dmg）](https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg)**
 - 更新内容と過去の版は [Releases](https://github.com/amam335345/darugoro-site/releases) にあります。
-- はじめて使うときの手順やアプリの消し方は、[配布ページ](https://amam335345.github.io/darugoro-site/)に書いています。
+- はじめて使うときの手順は、配布ページの[「はじめて使うとき」](https://amam335345.github.io/darugoro-site/#ja-first-launch)に書いています。
+- アプリの消し方は、配布ページの[「アプリの消し方」](https://amam335345.github.io/darugoro-site/#ja-uninstall)に書いています。
 
 ### 動作環境
 
@@ -97,7 +98,8 @@ DaruGoro is free. The app is signed with a Developer ID and notarized by Apple.
 
 - **[Download DaruGoro (.dmg)](https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg)**
 - Release notes and older versions are on [Releases](https://github.com/amam335345/darugoro-site/releases).
-- First-launch steps and how to uninstall are on the [website](https://amam335345.github.io/darugoro-site/#english).
+- For setup steps, see [First launch](https://amam335345.github.io/darugoro-site/#en-first-launch) on the website.
+- To remove the app, see [Uninstalling](https://amam335345.github.io/darugoro-site/#en-uninstall) on the website.
 
 ### Requirements
 
