@@ -107,6 +107,7 @@
     display: grid; place-items: center; font-weight: 700; font-size: 15px;
   }
   .path { font-weight: 600; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; overflow-wrap: anywhere; }
 
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
   .card .btn { margin-top: 6px; }
@@ -212,6 +213,16 @@
         <li><b>ボタンを押す。</b>割り当てたショートカットが DAW に送られます。CREATE ボタンで、いつでも割り当てを確かめられます。</li>
       </ol>
 
+      <h3>アプリの消し方</h3>
+      <p>DaruGoro.app をゴミ箱に入れるだけなら、プリセットや設定は Mac に残ります。入れ直すと、そのまま戻ります。すべて消したいときは、次のようにします。</p>
+      <ol class="steps">
+        <li><b>DaruGoro を終了し</b>、DaruGoro.app をゴミ箱に入れます。</li>
+        <li><b>残ったデータを消す。</b>Finder の <span class="path">移動 › フォルダへ移動…</span>（Shift + Command + G）で次の場所を開き、ゴミ箱に入れます。<br><code>~/Library/Application Support/DaruGoro</code>（プリセット・共通設定・読み込んだキーコマンド一覧）<br><code>~/Library/Preferences/com.amamamam.DaruGoro.plist</code>（アプリの設定）<br>DAWPad という名前のころから使っていた場合は、<code>~/Library/Application Support/DAWPad</code> と <code>~/Library/Preferences/com.amamamam.DAWPad.plist</code> も消します。</li>
+        <li><b>アクセシビリティの許可を外す。</b><span class="path">システム設定 › プライバシーとセキュリティ › アクセシビリティ</span> で DaruGoro を選び、「−」を押します（DAWPad の項目があれば、それも外します）。</li>
+        <li><b>ゴミ箱を空にします。</b></li>
+      </ol>
+      <p class="note" style="margin-top:12px">DaruGoro は、ログイン項目・常駐するもの・ドライバを入れていないので、ほかには何も残りません。</p>
+
       <h3>お礼について</h3>
       <div class="card">
         <p>DaruGoro が役に立ったら、お礼を送っていただけます。任意です。返信や返礼はお約束していません。</p>
@@ -281,6 +292,16 @@
         <li><b>Bring your DAW to the front.</b> When the top of the DaruGoro window shows your DAW and a preset, you are ready.</li>
         <li><b>Press a button.</b> The assigned shortcut is sent to the DAW. Press CREATE any time to see what each button does.</li>
       </ol>
+
+      <h3>Uninstalling</h3>
+      <p>If you only move DaruGoro.app to the Trash, your presets and settings stay on your Mac, and they come back when you install it again. To remove everything:</p>
+      <ol class="steps">
+        <li><b>Quit DaruGoro</b> and move DaruGoro.app to the Trash.</li>
+        <li><b>Remove the saved data.</b> In Finder, choose <span class="path">Go › Go to Folder…</span> (Shift-Command-G), open each of these, and move them to the Trash:<br><code>~/Library/Application Support/DaruGoro</code> (presets, common settings and imported key command lists)<br><code>~/Library/Preferences/com.amamamam.DaruGoro.plist</code> (app settings)<br>If you used the app back when it was called DAWPad, also remove <code>~/Library/Application Support/DAWPad</code> and <code>~/Library/Preferences/com.amamamam.DAWPad.plist</code>.</li>
+        <li><b>Remove Accessibility access.</b> In <span class="path">System Settings › Privacy &amp; Security › Accessibility</span>, select DaruGoro and click “−” (remove DAWPad too if it is listed).</li>
+        <li><b>Empty the Trash.</b></li>
+      </ol>
+      <p class="note" style="margin-top:12px">DaruGoro does not install login items, background helpers or drivers, so nothing else is left behind.</p>
 
       <h3>Say thanks</h3>
       <div class="card">
