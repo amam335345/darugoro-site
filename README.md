@@ -24,30 +24,43 @@
 [日本語](#日本語) | [English](#english)
 
 ---
+# 日本語
 
-## 日本語
+## DaruGoro とは
 
-DaruGoro（だるごろ）は、PS5（DualSense）コントローラーを Mac の DAW コントローラーにするアプリです。ボタンを押すと、前面にある DAW（Logic Pro / Studio One）に合わせて割り当てたキーボードショートカットを送ります。デスクに向かわず、ソファでくつろいだまま、再生・録音・編集・ミックスができます。
+DaruGoro（だるごろ）は、だるっとゴロゴロくつろぎながら、<br>DualSense(PS5)コントローラでDAW操作を行うことをコンセプトとしたmacOSアプリです。<br>
+DaruGoroではボタン割り当てができ、DualSenseコントローラをUSB-CまたはBluetoothで接続後、<br>マウスやキーボード代わりとしてお使いいただけます。<br>
 
-### できること
+### こんな方におすすめ
+- 楽器を構えたまま、デスクに戻らず録音したい方
+- コントローラを拡張デバイスとして使いたい方
+- キーボード自体に嫌気が差した方
 
-- **DAW ごとのプリセット** — Logic Pro と Studio One のプリセットを用意。編集・並べ替え・書き出し・読み込みが自由にできます。
-- **R2 でプリセットを切り替え** — R2 を引いたまま右スティックを倒すと、円形のメニューからプリセットを選べます。
-- **L1 の編集レイヤー** — L1 を押している間、顔ボタンと十字キーが編集用の操作に切り替わります。
-- **スティックを好きな役割に** — 十字キー・スクロール・マウスカーソル・矢印キーから選べます。
-- **タッチパッドでマウス操作** — コントローラーのタッチパッドで、移動・クリック・ドラッグができます。
-- **操作ヘルプ** — CREATE ボタンで、全部の割り当てをコントローラーの絵の周りに表示します。
+### Features
 
-<p>
-  <img src="images/darugoro-radial.gif" width="280" alt="プリセットの円。R2 を引いて右スティックで選び、R2 を離すと切り替わる。">
+- **DAWアプリごとのプリセット** — アプリごとにプリセットを用意できます。自分の好きなボタン配置を選べ、設定ファイルをインポート/エクスポートができます。
+- **スティックを好きな役割に** — 十字キー(ゲームパッドの十字と同じ動作)・スクロール・マウスカーソル・矢印キーを選べます。
+- **タッチパッドでマウス操作** — DualSenseのタッチパッドで、マウス移動・タップクリック・ドラッグ・Forceクリックができます。
+<p align="center">
   <img src="images/darugoro-cards.gif" width="480" alt="設定ウインドウ。ボタンを選ぶと、そのキーと修飾キーと役割が下に出る。">
 </p>
 
-R2 を引いて右スティックを回し、プリセットを切り替えます（左）。設定ウインドウでボタンを選ぶと、キーを変えられます（右）。
+- **プリセット切替** — プリセット切替ボタン(デフォルト:R2)でプリセット一覧が円形のメニューで表示されスティック操作でプリセットを簡単に切り替えられます。
+<p align="center">
+  <img src="images/darugoro-radial.gif" width="280" alt="プリセットの円。R2 を引いて右スティックで選び、R2 を離すと切り替わる。">
+</p>
+
+- **トリガーボタン** — トリガーボタン(デフォルト:L2)を押している間のボタン割り当てできるため、割り当てを拡張できます。
+- **操作ヘルプ** — ヘルプボタン(デフォルト:CREATE)で全ての割り当てをコントローラーの絵の周りに表示します。
+<p align="center">
+  <img src="images/darugoro-help.gif" width="760" alt="操作ヘルプ。右スティックを倒すと、光る項目がボタンからボタンへ移っていく。 / On-screen help: tilting the right stick moves the highlight from one button's action to the next.">
+</p>
+
 
 ### ダウンロード
 
-DaruGoro は無料です。Developer ID で署名し、Apple の公証を受けています。
+DaruGoro は無料です。<br>
+Developer ID で署名し、Apple の公証を受けています。
 
 - **[DaruGoro をダウンロード（.dmg）](https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg)**
 - Homebrew を使っているときは、`brew install --cask amam335345/darugoro/darugoro` でも入れられます（新しい版にするときは `brew upgrade --cask darugoro`）。
@@ -59,7 +72,7 @@ DaruGoro は無料です。Developer ID で署名し、Apple の公証を受け�
 
 - macOS 12 Monterey 以降
 - PS5 DualSense ワイヤレスコントローラー（Bluetooth または USB）
-- Logic Pro または Studio One（その他のアプリは「デフォルト」のプリセットで動きます）
+- Logic Pro（その他のアプリは「デフォルト」のプリセットで動きます）
 
 ### お礼について
 
