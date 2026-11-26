@@ -112,6 +112,14 @@
 
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
   .card .btn { margin-top: 6px; }
+  .brew { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 16px; }
+  .brew h4 { font-size: 17px; margin: 0 0 10px; }
+  .brew .cmd { display: flex; align-items: center; gap: 10px; background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 10px 10px 14px; }
+  .brew .cmd code { flex: 1; min-width: 0; font-size: 15px; color: var(--text); }
+  .brew .copy { flex: none; font: inherit; font-size: 14px; color: var(--text); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+  .brew .copy:hover { border-color: var(--accent); }
+  .brew .note { margin: 10px 0 0; }
+  .brew .note code { white-space: nowrap; }
 
   .tm { font-size: 14px; color: var(--muted); }
 
@@ -204,7 +212,11 @@
         <p>DaruGoro は無料です。Developer ID で署名し、Apple の公証を受けています。</p>
         <a class="btn primary" href="https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg">DaruGoro をダウンロード（.dmg）</a>
         <p class="note" style="margin-top:12px">更新内容と過去の版は <a href="https://github.com/amam335345/darugoro-site/releases">GitHub Releases</a> にあります。</p>
-        <p class="note">Homebrew を使っているときは、ターミナルで次の1行でも入れられます。新しい版にするときは <code>brew upgrade --cask darugoro</code> です。<br><code>brew install --cask amam335345/darugoro/darugoro</code></p>
+        <div class="brew">
+          <h4>Homebrew で入れる</h4>
+          <div class="cmd"><code>brew install --cask amam335345/darugoro/darugoro</code><button type="button" class="copy" data-done="コピーしました">コピー</button></div>
+          <p class="note">ターミナルに貼って実行します。新しい版にするときは <code>brew upgrade --cask darugoro</code> です。</p>
+        </div>
       </div>
 
       <h3 id="ja-first-launch">はじめて使うとき</h3>
@@ -219,7 +231,7 @@
       <p>DaruGoro.app をゴミ箱に入れるだけなら、プリセットや設定は Mac に残ります。入れ直すと、そのまま戻ります。すべて消したいときは、次のようにします。</p>
       <ol class="steps">
         <li><b>「データを消して終了…」を選ぶ。</b>アプリのメニュー（DaruGoro の「DaruGoroを終了」の上）か、メニューバーの DaruGoro のアイコンのメニューにあります。</li>
-        <li><b>「消して終了」を押す。</b>プリセット・設定・アクセシビリティの許可（DAWPad という名前のころの分も）を消して、DaruGoro が終了します。</li>
+        <li><b>「消して終了」を押す。</b>プリセット・設定・アクセシビリティの許可を消して、DaruGoro が終了します。</li>
         <li><b>DaruGoro.app をゴミ箱に入れ</b>、ゴミ箱を空にします。</li>
       </ol>
       <p class="note" style="margin-top:12px"><span class="path">システム設定 › プライバシーとセキュリティ › アクセシビリティ</span> に DaruGoro が残っていたら、選んで「−」を押して外します。</p>
@@ -227,8 +239,8 @@
 
       <p style="margin-top:20px"><b>アプリを先に消してしまったとき</b>は、残ったものを手で消せます。</p>
       <ol class="steps">
-        <li><b>残ったデータを消す。</b>Finder の <span class="path">移動 › フォルダへ移動…</span>（Shift + Command + G）で次の場所を開き、ゴミ箱に入れます（無いものは飛ばします）。<br><code>~/Library/Application Support/DaruGoro</code>（プリセット・共通設定・読み込んだキーコマンド一覧）<br><code>~/Library/Preferences/com.amamamam.DaruGoro.plist</code>（アプリの設定）<br><code>~/Library/Saved Application State/com.amamamam.DaruGoro.savedState</code>（ウインドウの状態）<br><code>~/Library/Caches/com.amamamam.DaruGoro</code>（キャッシュ）<br>DAWPad という名前のころから使っていた場合は、上の4つの <code>DaruGoro</code> を <code>DAWPad</code> にしたものも消します。</li>
-        <li><b>アクセシビリティの許可を外す。</b><span class="path">システム設定 › プライバシーとセキュリティ › アクセシビリティ</span> で DaruGoro を選び、「−」を押します（DAWPad の項目があれば、それも外します）。</li>
+        <li><b>残ったデータを消す。</b>Finder の <span class="path">移動 › フォルダへ移動…</span>（Shift + Command + G）で次の場所を開き、ゴミ箱に入れます（無いものは飛ばします）。<br><code>~/Library/Application Support/DaruGoro</code>（プリセット・共通設定・読み込んだキーコマンド一覧）<br><code>~/Library/Preferences/com.amamamam.DaruGoro.plist</code>（アプリの設定）<br><code>~/Library/Saved Application State/com.amamamam.DaruGoro.savedState</code>（ウインドウの状態）<br><code>~/Library/Caches/com.amamamam.DaruGoro</code>（キャッシュ）</li>
+        <li><b>アクセシビリティの許可を外す。</b><span class="path">システム設定 › プライバシーとセキュリティ › アクセシビリティ</span> で DaruGoro を選び、「−」を押します。</li>
         <li><b>ゴミ箱を空にします。</b></li>
       </ol>
       <p class="note" style="margin-top:12px">DaruGoro は、ログイン項目・常駐するもの・ドライバを入れていないので、ほかには何も残りません。</p>
@@ -293,7 +305,11 @@
         <p>DaruGoro is free. The app is signed with a Developer ID and notarized by Apple.</p>
         <a class="btn primary" href="https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg">Download DaruGoro (.dmg)</a>
         <p class="note" style="margin-top:12px">Release notes and older versions are on <a href="https://github.com/amam335345/darugoro-site/releases">GitHub Releases</a>.</p>
-        <p class="note">If you use Homebrew, you can also install it with this one line in Terminal. To update, run <code>brew upgrade --cask darugoro</code>.<br><code>brew install --cask amam335345/darugoro/darugoro</code></p>
+        <div class="brew">
+          <h4>Install with Homebrew</h4>
+          <div class="cmd"><code>brew install --cask amam335345/darugoro/darugoro</code><button type="button" class="copy" data-done="Copied">Copy</button></div>
+          <p class="note">Paste it into Terminal and run it. To update, run <code>brew upgrade --cask darugoro</code>.</p>
+        </div>
       </div>
 
       <h3 id="en-first-launch">First launch</h3>
@@ -308,7 +324,7 @@
       <p>If you only move DaruGoro.app to the Trash, your presets and settings stay on your Mac, and they come back when you install it again. To remove everything:</p>
       <ol class="steps">
         <li><b>Choose “データを消して終了…” (Erase Data and Quit).</b> It is in the DaruGoro menu, just above “DaruGoroを終了” (Quit DaruGoro), and in the menu of the DaruGoro icon in the menu bar. The menus are in Japanese for now.</li>
-        <li><b>Click “消して終了” (Erase and Quit).</b> DaruGoro removes your presets, settings and its Accessibility permission (including those from its old name, DAWPad), then quits.</li>
+        <li><b>Click “消して終了” (Erase and Quit).</b> DaruGoro removes your presets, settings and its Accessibility permission, then quits.</li>
         <li><b>Move DaruGoro.app to the Trash</b> and empty the Trash.</li>
       </ol>
       <p class="note" style="margin-top:12px">If DaruGoro is still listed in <span class="path">System Settings › Privacy &amp; Security › Accessibility</span>, select it and click “−”.</p>
@@ -316,8 +332,8 @@
 
       <p style="margin-top:20px"><b>If you already deleted the app</b>, you can remove the leftovers by hand:</p>
       <ol class="steps">
-        <li><b>Remove the saved data.</b> In Finder, choose <span class="path">Go › Go to Folder…</span> (Shift-Command-G), open each of these, and move them to the Trash (skip any that do not exist):<br><code>~/Library/Application Support/DaruGoro</code> (presets, common settings and imported key command lists)<br><code>~/Library/Preferences/com.amamamam.DaruGoro.plist</code> (app settings)<br><code>~/Library/Saved Application State/com.amamamam.DaruGoro.savedState</code> (window state)<br><code>~/Library/Caches/com.amamamam.DaruGoro</code> (cache)<br>If you used the app back when it was called DAWPad, also remove the same four with <code>DAWPad</code> in place of <code>DaruGoro</code>.</li>
-        <li><b>Remove Accessibility access.</b> In <span class="path">System Settings › Privacy &amp; Security › Accessibility</span>, select DaruGoro and click “−” (remove DAWPad too if it is listed).</li>
+        <li><b>Remove the saved data.</b> In Finder, choose <span class="path">Go › Go to Folder…</span> (Shift-Command-G), open each of these, and move them to the Trash (skip any that do not exist):<br><code>~/Library/Application Support/DaruGoro</code> (presets, common settings and imported key command lists)<br><code>~/Library/Preferences/com.amamamam.DaruGoro.plist</code> (app settings)<br><code>~/Library/Saved Application State/com.amamamam.DaruGoro.savedState</code> (window state)<br><code>~/Library/Caches/com.amamamam.DaruGoro</code> (cache)</li>
+        <li><b>Remove Accessibility access.</b> In <span class="path">System Settings › Privacy &amp; Security › Accessibility</span>, select DaruGoro and click “−”.</li>
         <li><b>Empty the Trash.</b></li>
       </ol>
       <p class="note" style="margin-top:12px">DaruGoro does not install login items, background helpers or drivers, so nothing else is left behind.</p>
@@ -343,5 +359,17 @@
   </div>
 </footer>
 
+<script>
+  document.querySelectorAll('.brew .copy').forEach(function (button) {
+    var label = button.textContent;
+    button.addEventListener('click', function () {
+      var text = button.parentElement.querySelector('code').textContent;
+      navigator.clipboard.writeText(text).then(function () {
+        button.textContent = button.dataset.done;
+        setTimeout(function () { button.textContent = label; }, 1600);
+      });
+    });
+  });
+</script>
 </body>
 </html>
