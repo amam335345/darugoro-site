@@ -64,7 +64,6 @@ DaruGoro は無料です。Developer ID で署名し、Apple の公証を受け�
 
 DaruGoroは無料です。もし役に立ったら、[Ko-fi](https://ko-fi.com/amam335345) でお礼を送っていただけると嬉しいです。これからの開発の励みになります。<br>送らなくても、すべての機能を使えます。返信や返礼はありません。
 
-気に入ったら、このページの右上の ☆ Star を押してもらえると励みになります。
 
 ### 商標について
 
@@ -111,7 +110,6 @@ DaruGoro is free. The app is signed with a Developer ID and notarized by Apple.
 
 DaruGoro is free. If it helps you, I'd be glad if you sent a thank-you on [Ko-fi](https://ko-fi.com/amam335345). It would encourage me to keep developing the app.<br>Every feature works even if you don't. There are no replies or rewards.
 
-If you like it, a ☆ Star at the top right of this page would mean a lot.
 
 ### Trademarks
 
