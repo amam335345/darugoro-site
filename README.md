@@ -50,6 +50,7 @@ R2 を引いて右スティックを回し、プリセットを切り替えま�
 DaruGoro は無料です。Developer ID で署名し、Apple の公証を受けています。
 
 - **[DaruGoro をダウンロード（.dmg）](https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg)**
+- Homebrew を使っているときは、`brew install --cask amam335345/darugoro/darugoro` でも入れられます（新しい版にするときは `brew upgrade --cask darugoro`）。
 - 更新内容と過去の版は [Releases](https://github.com/amam335345/darugoro-site/releases) にあります。
 - はじめて使うときの手順は、配布ページの[「はじめて使うとき」](https://amam335345.github.io/darugoro-site/#ja-first-launch)に書いています。
 - アプリの消し方は、配布ページの[「アプリの消し方」](https://amam335345.github.io/darugoro-site/#ja-uninstall)に書いています。
@@ -96,6 +97,7 @@ Hold R2 and turn the right stick to switch presets (left). Pick a button in the 
 DaruGoro is free. The app is signed with a Developer ID and notarized by Apple.
 
 - **[Download DaruGoro (.dmg)](https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg)**
+- With Homebrew, you can also run `brew install --cask amam335345/darugoro/darugoro` (update with `brew upgrade --cask darugoro`).
 - Release notes and older versions are on [Releases](https://github.com/amam335345/darugoro-site/releases).
 - For setup steps, see [First launch](https://amam335345.github.io/darugoro-site/#en-first-launch) on the website.
 - To remove the app, see [Uninstalling](https://amam335345.github.io/darugoro-site/#en-uninstall) on the website.
