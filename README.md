@@ -28,8 +28,9 @@
 
 ## DaruGoro とは
 
-DaruGoro（だるごろ）は、だるっとゴロゴロくつろぎながら、<br>DualSense(PS5)コントローラでDAW操作を行うことをコンセプトとしたmacOSアプリです。<br>
-DaruGoroではボタン割り当てができ、DualSenseコントローラをUSB-CまたはBluetoothで接続後、<br>マウスやキーボード代わりとしてお使いいただけます。<br>
+DaruGoro（だるごろ）は、だるっとゴロゴロくつろぎながら、DualSense(PS5)コントローラでDAW操作を行うことをコンセプトとしたmacOSアプリです。
+
+DaruGoroではボタン割り当てができ、DualSenseコントローラをUSB-CまたはBluetoothで接続後、マウスやキーボード代わりとしてお使いいただけます。
 
 ### こんな方におすすめ
 - 楽器を構えたまま、デスクに戻らず録音したい方
@@ -38,7 +39,7 @@ DaruGoroではボタン割り当てができ、DualSenseコントローラをUSB
 
 ### 特長
 
-- **DAWアプリごとのプリセット** — アプリごとにプリセットを用意できます。自分の好きなボタン配置を選べ、設定ファイルをインポート/エクスポートができます。
+- **DAWアプリごとのプリセット** — アプリごとにプリセットを用意できます。自分の好きなボタン配置を選べ、設定ファイルのインポート/エクスポートもできます。
 - **スティックを好きな役割に** — 十字キー(ゲームパッドの十字と同じ動作)・スクロール・マウスカーソル・矢印キーを選べます。
 - **タッチパッドでマウス操作** — DualSenseのタッチパッドで、マウス移動・タップクリック・ドラッグ・Forceクリックができます。
 <p align="center">
@@ -50,17 +51,15 @@ DaruGoroではボタン割り当てができ、DualSenseコントローラをUSB
   <img src="images/darugoro-radial.gif" width="480" alt="プリセットの円。R2 を引いて右スティックで選び、R2 を離すと切り替わる。">
 </p>
 
-- **トリガーボタン** — トリガーボタン(デフォルト:L2)を押している間のボタン割り当てできるため、割り当てを拡張できます。
+- **レイヤー切り替え** — レイヤー切り替えボタン(デフォルト:L1)を押している間のボタン割り当てできるため、割り当てを拡張できます。
 - **操作ヘルプ** — ヘルプボタン(デフォルト:CREATE)で全ての割り当てをコントローラーの絵の周りに表示します。
 <p align="center">
-  <img src="images/darugoro-help.gif" width="760" alt="操作ヘルプ。右スティックを倒すと、光る項目がボタンからボタンへ移っていく。 / On-screen help: tilting the right stick moves the highlight from one button's action to the next.">
+  <img src="images/darugoro-help.gif" width="760" alt="操作ヘルプ。右スティックを倒すと、光る項目がボタンからボタンへ移っていく。">
 </p>
-
 
 ### ダウンロード
 
-DaruGoro は無料です。<br>
-Developer ID で署名し、Apple の公証を受けています。
+DaruGoro は無料です。Developer ID で署名し、Apple の公証を受けています。
 
 - **[DaruGoro をダウンロード（.dmg）](https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg)**
 - Homebrew を使っているときは、`brew install --cask amam335345/darugoro/darugoro` でも入れられます（新しい版にするときは `brew upgrade --cask darugoro`）。
@@ -72,38 +71,52 @@ Developer ID で署名し、Apple の公証を受けています。
 
 - macOS 12 Monterey 以降
 - PS5 DualSense ワイヤレスコントローラー（Bluetooth または USB）
-- Logic Pro（その他のアプリは「デフォルト」のプリセットで動きます）
+- Logic Pro または Studio One（その他のアプリは「デフォルト」のプリセットで動きます）
 
 ### お礼について
 
-DaruGoroは無料です。もし役に立ったら、[Ko-fi](https://ko-fi.com/amam335345) でお礼を送っていただけると嬉しいです。これからの開発の励みになります。<br>送らなくても、すべての機能を使えます。返信や返礼はありません。
+DaruGoroは無料です。もし役に立ったら、[Ko-fi](https://ko-fi.com/amam335345) でお礼を送っていただけると嬉しいです。これからの開発の励みになります。
 
+送らなくても、すべての機能を使えます。返信や返礼はありません。
 
 ### 商標について
 
-DualSense、PlayStation および PS5 は Sony Interactive Entertainment Inc. の、Logic Pro は Apple Inc. の商標または登録商標です。DaruGoro はこれらの企業と提携しておらず、承認も受けていません。
+DualSense、PlayStation および PS5 は Sony Interactive Entertainment Inc. の、Logic Pro は Apple Inc. の、Studio One は PreSonus Audio Electronics, Inc. の商標または登録商標です。DaruGoro はこれらの企業と提携しておらず、承認も受けていません。
 
 ---
 
-## English
+# English
 
-DaruGoro turns a PS5 (DualSense) controller into a controller for your DAW on Mac. Press a button and DaruGoro sends the keyboard shortcut you assigned for the app in front — Logic Pro or Studio One — so you can play, record, edit and mix without sitting at your desk.
+## What is DaruGoro?
 
-### What it does
+DaruGoro is a macOS app built around one idea: lounging around lazily while you run your DAW with a DualSense (PS5) controller.
 
-- **Presets per DAW** — Ready-made presets for Logic Pro and Studio One. Edit, reorder, export and import them freely.
-- **Switch presets with R2** — Hold R2 and tilt the right stick to pick a preset from a circular menu.
-- **L1 editing layer** — While L1 is held, the face buttons and D-pad switch to editing actions.
-- **Sticks, your way** — Use each stick as a D-pad, scroll wheel, mouse cursor or arrow keys.
-- **Touchpad mouse** — Move, click and drag with the controller's touchpad.
-- **On-screen help** — Press CREATE to see every assignment drawn around the controller.
+You can assign actions to the buttons. Connect a DualSense controller over USB-C or Bluetooth, and use it in place of your mouse and keyboard.
 
-<p>
-  <img src="images/darugoro-radial.gif" width="280" alt="Preset menu: hold R2, turn the right stick to pick a preset, release R2 to switch.">
-  <img src="images/darugoro-cards.gif" width="480" alt="Settings window: selecting a button shows its key, modifiers and role below.">
+### Who it's for
+- Anyone who wants to record with an instrument in hand, without going back to the desk
+- Anyone who wants to use a controller as an extra input device
+- Anyone who has simply had enough of the keyboard
+
+### Features
+
+- **Presets for each DAW** — Keep presets for each app. Pick the button layout you like, and import or export your settings file.
+- **Sticks, your way** — Choose D-pad (works like a gamepad's D-pad), scroll, mouse cursor or arrow keys.
+- **Touchpad mouse** — Move the mouse, tap to click, drag and Force Click with the DualSense touchpad.
+<p align="center">
+  <img src="images/darugoro-cards.gif" width="760" alt="Settings window: selecting a button shows its key, modifiers and role below.">
 </p>
 
-Hold R2 and turn the right stick to switch presets (left). Pick a button in the settings window to change its key (right). Screenshots are from the Japanese UI.
+- **Preset switching** — Press the preset button (default: R2) to show your presets in a circular menu, and switch between them easily with the stick.
+<p align="center">
+  <img src="images/darugoro-radial.gif" width="480" alt="Preset menu: hold R2, turn the right stick to pick a preset, release R2 to switch.">
+</p>
+
+- **Layer switching** — While the layer button (default: L1) is held, the buttons use a second set of assignments, so you can assign more actions.
+- **On-screen help** — Press the help button (default: CREATE) to see every assignment drawn around the controller.
+<p align="center">
+  <img src="images/darugoro-help.gif" width="760" alt="On-screen help: tilting the right stick moves the highlight from one button's action to the next.">
+</p>
 
 ### Download
 
@@ -123,9 +136,10 @@ DaruGoro is free. The app is signed with a Developer ID and notarized by Apple.
 
 ### Support DaruGoro
 
-DaruGoro is free. If it helps you, I'd be glad if you sent a thank-you on [Ko-fi](https://ko-fi.com/amam335345). It would encourage me to keep developing the app.<br>Every feature works even if you don't. There are no replies or rewards.
+DaruGoro is free. If it helps you, I'd be glad if you sent a thank-you on [Ko-fi](https://ko-fi.com/amam335345). It would encourage me to keep developing the app.
 
+Every feature works even if you don't. There are no replies or rewards.
 
 ### Trademarks
 
-DualSense, PlayStation and PS5 are trademarks or registered trademarks of Sony Interactive Entertainment Inc., and Logic Pro is a trademark or registered trademark of Apple Inc. DaruGoro is not affiliated with, nor endorsed by, these companies.
+DualSense, PlayStation and PS5 are trademarks or registered trademarks of Sony Interactive Entertainment Inc., Logic Pro is a trademark or registered trademark of Apple Inc., and Studio One is a trademark or registered trademark of PreSonus Audio Electronics, Inc. DaruGoro is not affiliated with, nor endorsed by, these companies.
