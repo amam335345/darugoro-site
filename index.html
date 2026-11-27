@@ -39,11 +39,14 @@ header nav a{color:var(--muted);text-decoration:none}
 .hero .note{text-align:center}
 .shot{margin:22px 0 0}.shot img{border:2px solid var(--line);border-radius:12px}
 .ruler{display:flex;justify-content:space-between;font-size:12.5px;font-variant-numeric:tabular-nums;border-bottom:2px solid var(--line);padding:20px 0 0;margin-top:34px;position:sticky;top:0;z-index:5;background:var(--bg)}
-/* 目盛りの数字はトラックへの近道。押すとそのトラックへ移る */
-.ruler a{color:var(--faint);text-decoration:none;min-width:30px;padding:6px 4px 8px;text-align:center;border-radius:6px 6px 0 0;position:relative}
-.ruler a:hover,.ruler a:focus-visible{color:var(--mint);background:var(--lane);outline:none}
-.ruler a.on{color:var(--mint)}
-.ruler a.on:after{content:"";position:absolute;left:50%;bottom:-2px;width:2px;height:10px;margin-left:-1px;background:var(--mint)}
+/* 目盛りの数字はトラックへの近道。押すとそのトラックへ移る。数字の横にトラックの名前 */
+.ruler a{display:flex;align-items:baseline;gap:5px;color:var(--faint);text-decoration:none;white-space:nowrap;padding:6px 6px 8px;border-radius:6px 6px 0 0;position:relative}
+.ruler a .t{font-size:12px;color:var(--muted)}
+.ruler a:hover,.ruler a:focus-visible{background:var(--lane);outline:none}
+.ruler a:hover .n,.ruler a:hover .t,.ruler a:focus-visible .n,.ruler a:focus-visible .t,.ruler a.on .n,.ruler a.on .t{color:var(--mint)}
+.ruler a.on:after{content:"";position:absolute;left:12px;bottom:-2px;width:2px;height:10px;margin-left:-1px;background:var(--mint)}
+/* 幅が足りないときは、目盛りを横にずらして見る */
+@media(max-width:760px){.ruler{overflow-x:auto;scrollbar-width:none;gap:4px}.ruler::-webkit-scrollbar{display:none}}
 .track{border:2px solid var(--line);border-radius:14px;overflow:hidden;margin-top:14px;background:var(--lane2)}
 .thead{display:flex;align-items:center;gap:10px;background:var(--lane);padding:10px 14px;border-bottom:2px solid var(--line)}
 /* トラックの印は、ロゴと同じ「太い線の角丸」 */
@@ -106,7 +109,7 @@ footer a{color:var(--muted)}
 
 <!-- ================= 日本語 ================= -->
 <div id="japanese" lang="ja">
-<nav class="ruler" aria-label="トラックへ移動"><a href="#ja-about" title="DaruGoro とは">1</a><a href="#ja-for" title="こんな方におすすめ">2</a><a href="#ja-features" title="特長">3</a><a href="#ja-motion" title="動きを見る">4</a><a href="#ja-req" title="動作環境">5</a><a href="#ja-download" title="ダウンロード">6</a><a href="#ja-first-launch" title="はじめて使うとき">7</a><a href="#ja-uninstall" title="アプリの消し方">8</a><a href="#ja-thanks" title="お礼・商標">9</a></nav>
+<nav class="ruler" aria-label="トラックへ移動"><a href="#ja-about" title="DaruGoro とは"><span class="n">1</span><span class="t">とは</span></a><a href="#ja-for" title="こんな方におすすめ"><span class="n">2</span><span class="t">おすすめ</span></a><a href="#ja-features" title="特長"><span class="n">3</span><span class="t">特長</span></a><a href="#ja-motion" title="動きを見る"><span class="n">4</span><span class="t">動き</span></a><a href="#ja-req" title="動作環境"><span class="n">5</span><span class="t">動作環境</span></a><a href="#ja-download" title="ダウンロード"><span class="n">6</span><span class="t">ダウンロード</span></a><a href="#ja-first-launch" title="はじめて使うとき"><span class="n">7</span><span class="t">はじめて</span></a><a href="#ja-uninstall" title="アプリの消し方"><span class="n">8</span><span class="t">消し方</span></a><a href="#ja-thanks" title="お礼・商標"><span class="n">9</span><span class="t">お礼</span></a></nav>
 <div class="track" id="ja-about">
   <div class="thead"><span class="dot"></span><b>Track 1 — DaruGoro とは</b><span>About</span></div>
   <div class="lane">
@@ -215,7 +218,7 @@ footer a{color:var(--muted)}
 
 <!-- ================= English ================= -->
 <div id="english" lang="en">
-<nav class="ruler" aria-label="Jump to a track"><a href="#en-about" title="What is DaruGoro?">1</a><a href="#en-for" title="Who it’s for">2</a><a href="#en-features" title="Features">3</a><a href="#en-motion" title="In motion">4</a><a href="#en-req" title="Requirements">5</a><a href="#download" title="Download">6</a><a href="#en-first-launch" title="First launch">7</a><a href="#en-uninstall" title="Uninstalling">8</a><a href="#en-thanks" title="Say thanks / Trademarks">9</a></nav>
+<nav class="ruler" aria-label="Jump to a track"><a href="#en-about" title="What is DaruGoro?"><span class="n">1</span><span class="t">About</span></a><a href="#en-for" title="Who it’s for"><span class="n">2</span><span class="t">For you</span></a><a href="#en-features" title="Features"><span class="n">3</span><span class="t">Features</span></a><a href="#en-motion" title="In motion"><span class="n">4</span><span class="t">Motion</span></a><a href="#en-req" title="Requirements"><span class="n">5</span><span class="t">Requirements</span></a><a href="#download" title="Download"><span class="n">6</span><span class="t">Download</span></a><a href="#en-first-launch" title="First launch"><span class="n">7</span><span class="t">First launch</span></a><a href="#en-uninstall" title="Uninstalling"><span class="n">8</span><span class="t">Uninstall</span></a><a href="#en-thanks" title="Say thanks / Trademarks"><span class="n">9</span><span class="t">Thanks</span></a></nav>
 <div class="track" id="en-about">
   <div class="thead"><span class="dot"></span><b>Track 1 — What is DaruGoro?</b><span>About</span></div>
   <div class="lane">
@@ -336,17 +339,38 @@ footer a{color:var(--muted)}
       });
     });
   });
-  // 目盛り: 今見ているトラックの番号を光らせる
+  // 目盛り: 今見ているトラックの番号を光らせる。
+  // 目盛りのすぐ下まで来たトラックを「今」とする。押した番号は、そのトラックが目盛りの下にある間はそのまま光らせる
+  // （短いトラックはページの終わりで上まで来ないため）
   document.querySelectorAll('.ruler').forEach(function (ruler) {
     var links = Array.prototype.slice.call(ruler.querySelectorAll('a'));
     var targets = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    var picked = -1;
+    // 目盛りが上に貼り付いたときの下端
+    function edge() { return ruler.offsetHeight + 24; }
     function update() {
-      var current = -1;
-      targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top < window.innerHeight * 0.4) current = i; });
+      var line = edge(), current = -1;
+      targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top <= line) current = i; });
       var last = targets[targets.length - 1];
       if (last && last.getBoundingClientRect().bottom < 0) current = -1;
+      if (picked >= 0) current = picked;
       links.forEach(function (a, i) { a.classList.toggle('on', i === current); });
+      var on = links[current];
+      if (on && ruler.scrollWidth > ruler.clientWidth) {
+        var left = on.offsetLeft - ruler.clientWidth / 2 + on.offsetWidth / 2;
+        ruler.scrollLeft = left;
+      }
     }
+    links.forEach(function (a, i) { a.addEventListener('click', function () { picked = i; setTimeout(update, 50); }); });
+    // ほかのページ内リンク（もう一方の目盛り・日本語/English）を押したら、固定をやめる
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest && e.target.closest('a[href^="#"]');
+      if (link && links.indexOf(link) < 0 && picked >= 0) { picked = -1; setTimeout(update, 50); }
+    });
+    // 自分でスクロールしたら、押した番号の固定をやめる
+    ['wheel', 'touchstart', 'keydown'].forEach(function (type) {
+      window.addEventListener(type, function () { if (picked >= 0) { picked = -1; setTimeout(update, 50); } }, { passive: true });
+    });
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
     update();
