@@ -30,8 +30,12 @@ header nav a{color:var(--muted);text-decoration:none}
 .hero .mark{display:flex;align-items:center;gap:clamp(14px,3.5vw,22px)}
 .hero .mark img{width:clamp(64px,17vw,96px);height:auto;border-radius:22%;flex:none}
 .hero h1{font-size:clamp(46px,13vw,84px);line-height:1.02;margin:0;letter-spacing:-.01em}
-.hero .tag{font-size:clamp(17px,4.6vw,21px);margin:18px 0 0}
-.hero .tag.en{color:var(--muted);font-size:15.5px;margin-top:2px}
+/* 名前 → キャッチ（惹く）→ 説明文（何のアプリかを補う） */
+.hero .catch{font-family:ui-rounded,"SF Pro Rounded","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;font-weight:700;font-size:clamp(21px,5.8vw,28px);line-height:1.35;color:var(--mint);margin:18px 0 0}
+.hero .catch:not(.en) span{display:inline-block} /* 句の途中で折り返さない */
+.hero .catch.en{font-size:clamp(15px,4.2vw,17.5px);color:var(--muted);font-weight:600;margin-top:2px}
+.hero .tag{font-size:clamp(15.5px,4.2vw,17.5px);margin:16px 0 0}
+.hero .tag.en{color:var(--muted);font-size:14.5px;margin-top:2px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:12px;font-weight:700;font-size:16.5px;text-decoration:none;border:2px solid transparent}
 .btn.mint{background:var(--mint);color:var(--mint-ink)}
 .hero .btn.mint{width:100%;margin:22px 0 4px}
@@ -100,6 +104,8 @@ footer a{color:var(--muted)}
 
 <div class="hero" id="top">
   <div class="mark"><img src="images/icon.png" width="96" height="96" alt="DaruGoro app icon"><h1>DaruGoro</h1></div>
+  <p class="catch"><span>ゲーム感覚で</span><span>DAWをいじれる</span><span>Macアプリ</span></p>
+  <p class="catch en" lang="en">A Mac app that lets you tinker with your DAW like a game</p>
   <p class="tag">ソファでゴロゴロしながら、PS5コントローラーでDAWを操作するMacアプリ。</p>
   <p class="tag en" lang="en">Control your DAW from the sofa — with a PS5 DualSense controller.</p>
   <a class="btn mint" href="https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg" lang="en">Download for Mac</a>
@@ -113,7 +119,7 @@ footer a{color:var(--muted)}
 <div class="track" id="ja-about">
   <div class="thead"><span class="dot"></span><b>Track 1 — DaruGoro とは</b><span>About</span></div>
   <div class="lane">
-    <p class="lead">DaruGoro（だるごろ）は、だるっとゴロゴロくつろぎながら、DualSense(PS5)コントローラでDAW操作を行うことをコンセプトとしたmacOSアプリです。</p>
+    <p class="lead">DaruGoro（だるごろ）は、デスクに向き合いすぎず、だるっとゴロゴロくつろぎながら、DualSense(PS5)コントローラでDAW操作を行うことをコンセプトとしたmacOSアプリです。</p>
     <p class="lead">DaruGoroではボタン割り当てができ、DualSenseコントローラをUSB-CまたはBluetoothで接続後、マウスやキーボード代わりとしてお使いいただけます。</p>
   </div>
 </div>
@@ -222,7 +228,7 @@ footer a{color:var(--muted)}
 <div class="track" id="en-about">
   <div class="thead"><span class="dot"></span><b>Track 1 — What is DaruGoro?</b><span>About</span></div>
   <div class="lane">
-    <p class="lead">DaruGoro is a macOS app built around one idea: lounging around lazily while you run your DAW with a DualSense (PS5) controller.</p>
+    <p class="lead">DaruGoro is a macOS app built around one idea: without staying glued to your desk, lounge around lazily while you run your DAW with a DualSense (PS5) controller.</p>
     <p class="lead">You can assign actions to the buttons. Connect a DualSense controller over USB-C or Bluetooth, and use it in place of your mouse and keyboard.</p>
   </div>
 </div>

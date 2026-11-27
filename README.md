@@ -5,8 +5,13 @@
 <h1 align="center">DaruGoro</h1>
 
 <p align="center">
-  <b>ソファでゴロゴロしながら、PS5コントローラーでDAWを操作するMacアプリ。</b><br>
-  <b>Control your DAW from the sofa — with a PS5 DualSense controller.</b>
+  <b>ゲーム感覚でDAWをいじれるMacアプリ</b><br>
+  <b>A Mac app that lets you tinker with your DAW like a game</b>
+</p>
+
+<p align="center">
+  ソファでゴロゴロしながら、PS5コントローラーでDAWを操作するMacアプリ。<br>
+  Control your DAW from the sofa — with a PS5 DualSense controller.
 </p>
 
 <p align="center">
@@ -28,7 +33,7 @@
 
 ## DaruGoro とは
 
-DaruGoro（だるごろ）は、だるっとゴロゴロくつろぎながら、DualSense(PS5)コントローラでDAW操作を行うことをコンセプトとしたmacOSアプリです。
+DaruGoro（だるごろ）は、デスクに向き合いすぎず、だるっとゴロゴロくつろぎながら、DualSense(PS5)コントローラでDAW操作を行うことをコンセプトとしたmacOSアプリです。
 
 DaruGoroではボタン割り当てができ、DualSenseコントローラをUSB-CまたはBluetoothで接続後、マウスやキーボード代わりとしてお使いいただけます。
 
@@ -89,7 +94,7 @@ DualSense、PlayStation および PS5 は Sony Interactive Entertainment Inc. �
 
 ## What is DaruGoro?
 
-DaruGoro is a macOS app built around one idea: lounging around lazily while you run your DAW with a DualSense (PS5) controller.
+DaruGoro is a macOS app built around one idea: without staying glued to your desk, lounge around lazily while you run your DAW with a DualSense (PS5) controller.
 
 You can assign actions to the buttons. Connect a DualSense controller over USB-C or Bluetooth, and use it in place of your mouse and keyboard.
 
