@@ -4,6 +4,18 @@
 <meta name="description" content="DaruGoro is a free Mac app that turns a PS5 DualSense controller into a controller for Logic Pro and Studio One. / DualSense で Mac の DAW を操作する無料のアプリ。">
 <meta name="theme-color" content="#2a2d3a">
 <link rel="icon" type="image/png" href="images/icon.png">
+<script>
+  // ヒーローの言語: 前に選んだもの → Mac の言語（日本語なら日本語、それ以外は英語）
+  (function () {
+    var lang = null;
+    try { lang = localStorage.getItem('heroLang'); } catch (e) {}
+    if (lang !== 'ja' && lang !== 'en') {
+      var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+      lang = /^ja/i.test(list[0] || '') ? 'ja' : 'en';
+    }
+    if (lang === 'en') document.documentElement.classList.add('hero-en');
+  })();
+</script>
 <style>
 /* 色はアプリの既定のテーマ（ロゴの紺グレー × ミント）に合わせる。真っ黒・真っ白は使わない */
 :root{color-scheme:dark;
@@ -32,10 +44,11 @@ header nav a{color:var(--muted);text-decoration:none}
 .hero h1{font-size:clamp(46px,13vw,84px);line-height:1.02;margin:0;letter-spacing:-.01em}
 /* 名前 → キャッチ（惹く）→ 説明文（何のアプリかを補う） */
 .hero .catch{font-family:ui-rounded,"SF Pro Rounded","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;font-weight:700;font-size:clamp(21px,5.8vw,28px);line-height:1.35;color:var(--mint);margin:18px 0 0}
-.hero .catch:not(.en) span{display:inline-block} /* 句の途中で折り返さない */
-.hero .catch.en{font-size:clamp(15px,4.2vw,17.5px);color:var(--muted);font-weight:600;margin-top:2px}
-.hero .tag{font-size:clamp(15.5px,4.2vw,17.5px);margin:16px 0 0}
-.hero .tag.en{color:var(--muted);font-size:14.5px;margin-top:2px}
+.hero .catch span{display:inline-block} /* 句の途中で折り返さない */
+.hero .catch{text-wrap:balance} /* 折り返すときは行の長さを揃える */
+.hero .tag{font-size:14.5px;color:var(--muted);margin:8px 0 0}
+/* ヒーローは片方の言語だけ出す。Mac の言語で決め、上の「日本語／English」で切り替える */
+html.hero-en .hero [data-hero="ja"],html:not(.hero-en) .hero [data-hero="en"]{display:none}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:12px;font-weight:700;font-size:16.5px;text-decoration:none;border:2px solid transparent}
 .btn.mint{background:var(--mint);color:var(--mint-ink)}
 .hero .btn.mint{width:100%;margin:22px 0 4px}
@@ -104,12 +117,13 @@ footer a{color:var(--muted)}
 
 <div class="hero" id="top">
   <div class="mark"><img src="images/icon.png" width="96" height="96" alt="DaruGoro app icon"><h1>DaruGoro</h1></div>
-  <p class="catch"><span>ゲーム感覚で</span><span>DAWをいじれる</span><span>Macアプリ</span></p>
-  <p class="catch en" lang="en">A Mac app that lets you tinker with your DAW like a game</p>
-  <p class="tag">ソファでゴロゴロしながら、PS5コントローラーでDAWを操作するMacアプリ。</p>
-  <p class="tag en" lang="en">Control your DAW from the sofa — with a PS5 DualSense controller.</p>
+  <p class="catch" data-hero="ja"><span>ゲーム感覚で</span><span>DAWをいじれる</span><span>Macアプリ</span></p>
+  <p class="catch" data-hero="en" lang="en">A Mac app that lets you tinker with your DAW like a game</p>
+  <p class="tag" data-hero="ja">ソファでゴロゴロしながら、PS5コントローラーでDAWを操作するMacアプリ。</p>
+  <p class="tag" data-hero="en" lang="en">Control your DAW from the sofa — with a PS5 DualSense controller.</p>
   <a class="btn mint" href="https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg" lang="en">Download for Mac</a>
-  <p class="note">無料 · macOS 12 以降 · Free · macOS 12 or later</p>
+  <p class="note" data-hero="ja">無料 · macOS 12 以降</p>
+  <p class="note" data-hero="en" lang="en">Free · macOS 12 or later</p>
   <div class="shot"><img src="images/main-window.png" width="1600" height="1030" alt="DaruGoro settings window showing a Logic Pro preset: each controller button is labelled with the shortcut it sends."></div>
 </div>
 
@@ -345,6 +359,15 @@ footer a{color:var(--muted)}
       });
     });
   });
+  // 上の「日本語／English」で、ヒーローの言語も切り替える
+  document.querySelectorAll('header nav a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var en = a.getAttribute('hreflang') === 'en';
+      document.documentElement.classList.toggle('hero-en', en);
+      try { localStorage.setItem('heroLang', en ? 'en' : 'ja'); } catch (e) {}
+    });
+  });
+
   // 目盛り: 今見ているトラックの番号を光らせる。
   // 目盛りのすぐ下まで来たトラックを「今」とする。押した番号は、そのトラックが目盛りの下にある間はそのまま光らせる
   // （短いトラックはページの終わりで上まで来ないため）

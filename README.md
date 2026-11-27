@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  ソファでゴロゴロしながら、PS5コントローラーでDAWを操作するMacアプリ。<br>
-  Control your DAW from the sofa — with a PS5 DualSense controller.
+  <sub>ソファでゴロゴロしながら、PS5コントローラーでDAWを操作するMacアプリ。</sub><br>
+  <sub>Control your DAW from the sofa — with a PS5 DualSense controller.</sub>
 </p>
 
 <p align="center">
