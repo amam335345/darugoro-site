@@ -78,14 +78,13 @@ html.hero-en .hero [data-hero="ja"],html:not(.hero-en) .hero [data-hero="en"]{di
 .region b{display:block;font-size:15.5px;margin-bottom:2px}
 .region p{margin:0;font-size:14.5px;color:#d9e6df}
 .region.o p{color:#d8e0f2}.region.s p{color:#d6d9e3}
-.region.half{margin-right:22%}.region.third{margin-right:44%}
-@media(max-width:560px){.region.half,.region.third{margin-right:0}}
 figure{margin:0}figure img{border-radius:10px;border:2px solid var(--line)}
 figure.nob img{border:0;max-width:min(360px,90%);margin:0 auto}
 figcaption{font-size:13.5px;color:var(--muted);margin-top:6px;text-align:center}
 .steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:12px}
 .steps>li{counter-increment:s;display:flex;gap:12px;align-items:flex-start}
-.steps>li:before{content:counter(s);flex:none;width:28px;height:28px;border-radius:8px;background:var(--layer);color:var(--layer-ink);display:grid;place-items:center;font-weight:700;font-size:14px;margin-top:2px;font-family:ui-rounded,"SF Pro Rounded","Hiragino Maru Gothic ProN",sans-serif}
+.steps>li:before{content:counter(s);flex:none;width:28px;height:28px;border-radius:8px;background:var(--mint);color:var(--mint-ink);display:grid;place-items:center;font-weight:700;font-size:14px;margin-top:2px;font-family:ui-rounded,"SF Pro Rounded","Hiragino Maru Gothic ProN",sans-serif}
+.steps>li:nth-child(even):before{background:var(--layer);color:var(--layer-ink)}
 .steps>li>div{flex:1;min-width:0}
 .steps p{margin:0;font-size:15px}.path{font-weight:600}
 code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;color:var(--mint);overflow-wrap:anywhere}
@@ -149,11 +148,11 @@ footer a{color:var(--muted)}
   <div class="thead"><span class="dot"></span><b>Track 3 — 特長</b><span>Logic Pro / Studio One</span></div>
   <div class="lane">
     <div class="region"><b>DAWアプリごとのプリセット</b><p>アプリごとにプリセットを用意できます。自分の好きなボタン配置を選べ、設定ファイルのインポート/エクスポートもできます。</p></div>
-    <div class="region half"><b>スティックを好きな役割に</b><p>十字キー(ゲームパッドの十字と同じ動作)・スクロール・マウスカーソル・矢印キーを選べます。</p></div>
-    <div class="region third"><b>タッチパッドでマウス操作</b><p>DualSenseのタッチパッドで、マウス移動・タップクリック・ドラッグ・Forceクリックができます。</p></div>
+    <div class="region o"><b>スティックを好きな役割に</b><p>十字キー(ゲームパッドの十字と同じ動作)・スクロール・マウスカーソル・矢印キーを選べます。</p></div>
+    <div class="region"><b>タッチパッドでマウス操作</b><p>DualSenseのタッチパッドで、マウス移動・タップクリック・ドラッグ・Forceクリックができます。</p></div>
     <div class="region o"><b>プリセット切替</b><p>プリセット切替ボタン(デフォルト:R2)でプリセット一覧が円形のメニューで表示されスティック操作でプリセットを簡単に切り替えられます。</p></div>
-    <div class="region o half"><b>レイヤー切り替え</b><p>レイヤー切り替えボタン(デフォルト:L1)を押している間のボタン割り当てできるため、割り当てを拡張できます。</p></div>
-    <div class="region"><b>操作ヘルプ</b><p>ヘルプボタン(デフォルト:CREATE)で全ての割り当てをコントローラーの絵の周りに表示します。</p></div>
+    <div class="region"><b>レイヤー切り替え</b><p>レイヤー切り替えボタン(デフォルト:L1)を押している間のボタン割り当てできるため、割り当てを拡張できます。</p></div>
+    <div class="region o"><b>操作ヘルプ</b><p>ヘルプボタン(デフォルト:CREATE)で全ての割り当てをコントローラーの絵の周りに表示します。</p></div>
   </div>
 </div>
 
@@ -258,11 +257,11 @@ footer a{color:var(--muted)}
   <div class="thead"><span class="dot"></span><b>Track 3 — Features</b><span>Logic Pro / Studio One</span></div>
   <div class="lane">
     <div class="region"><b>Presets for each DAW</b><p>Keep presets for each app. Pick the button layout you like, and import or export your settings file.</p></div>
-    <div class="region half"><b>Sticks, your way</b><p>Choose D-pad (works like a gamepad's D-pad), scroll, mouse cursor or arrow keys.</p></div>
-    <div class="region third"><b>Touchpad mouse</b><p>Move the mouse, tap to click, drag and Force Click with the DualSense touchpad.</p></div>
+    <div class="region o"><b>Sticks, your way</b><p>Choose D-pad (works like a gamepad's D-pad), scroll, mouse cursor or arrow keys.</p></div>
+    <div class="region"><b>Touchpad mouse</b><p>Move the mouse, tap to click, drag and Force Click with the DualSense touchpad.</p></div>
     <div class="region o"><b>Preset switching</b><p>Press the preset button (default: R2) to show your presets in a circular menu, and switch between them easily with the stick.</p></div>
-    <div class="region o half"><b>Layer switching</b><p>While the layer button (default: L1) is held, the buttons use a second set of assignments, so you can assign more actions.</p></div>
-    <div class="region"><b>On-screen help</b><p>Press the help button (default: CREATE) to see every assignment drawn around the controller.</p></div>
+    <div class="region"><b>Layer switching</b><p>While the layer button (default: L1) is held, the buttons use a second set of assignments, so you can assign more actions.</p></div>
+    <div class="region o"><b>On-screen help</b><p>Press the help button (default: CREATE) to see every assignment drawn around the controller.</p></div>
   </div>
 </div>
 
