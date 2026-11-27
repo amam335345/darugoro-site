@@ -15,7 +15,7 @@
   --mint:#9ad8ba;--mint-ink:#123528;   /* ロゴのミント＝通常の差し色 */
   --layer:#8fb2f0;--layer-ink:#102a5c; /* レイヤーの青（R2・L1） */
   --slate:#3a3f52}
-*{box-sizing:border-box}[id]{scroll-margin-top:16px}
+*{box-sizing:border-box}[id]{scroll-margin-top:16px}.track[id]{scroll-margin-top:56px}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Segoe UI","Noto Sans JP",sans-serif;line-height:1.7;-webkit-text-size-adjust:100%}
 /* 見出し・ボタンは、ロゴの太く丸い線に合わせて丸みのある字 */
@@ -38,7 +38,12 @@ header nav a{color:var(--muted);text-decoration:none}
 .note{font-size:13px;color:var(--muted)}
 .hero .note{text-align:center}
 .shot{margin:22px 0 0}.shot img{border:2px solid var(--line);border-radius:12px}
-.ruler{display:flex;justify-content:space-between;color:var(--faint);font-size:11.5px;font-variant-numeric:tabular-nums;border-bottom:2px solid var(--line);padding:26px 4px 6px;margin-top:34px}
+.ruler{display:flex;justify-content:space-between;font-size:12.5px;font-variant-numeric:tabular-nums;border-bottom:2px solid var(--line);padding:20px 0 0;margin-top:34px;position:sticky;top:0;z-index:5;background:var(--bg)}
+/* 目盛りの数字はトラックへの近道。押すとそのトラックへ移る */
+.ruler a{color:var(--faint);text-decoration:none;min-width:30px;padding:6px 4px 8px;text-align:center;border-radius:6px 6px 0 0;position:relative}
+.ruler a:hover,.ruler a:focus-visible{color:var(--mint);background:var(--lane);outline:none}
+.ruler a.on{color:var(--mint)}
+.ruler a.on:after{content:"";position:absolute;left:50%;bottom:-2px;width:2px;height:10px;margin-left:-1px;background:var(--mint)}
 .track{border:2px solid var(--line);border-radius:14px;overflow:hidden;margin-top:14px;background:var(--lane2)}
 .thead{display:flex;align-items:center;gap:10px;background:var(--lane);padding:10px 14px;border-bottom:2px solid var(--line)}
 /* トラックの印は、ロゴと同じ「太い線の角丸」 */
@@ -99,41 +104,54 @@ footer a{color:var(--muted)}
   <div class="shot"><img src="images/main-window.png" width="1600" height="1030" alt="DaruGoro settings window showing a Logic Pro preset: each controller button is labelled with the shortcut it sends."></div>
 </div>
 
-<div class="ruler" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div>
-
 <!-- ================= 日本語 ================= -->
 <div id="japanese" lang="ja">
-<div class="track">
-  <div class="thead"><span class="dot"></span><b>Track 1 — できること</b><span>Logic Pro / Studio One</span></div>
+<nav class="ruler" aria-label="トラックへ移動"><a href="#ja-about" title="DaruGoro とは">1</a><a href="#ja-for" title="こんな方におすすめ">2</a><a href="#ja-features" title="特長">3</a><a href="#ja-motion" title="動きを見る">4</a><a href="#ja-req" title="動作環境">5</a><a href="#ja-download" title="ダウンロード">6</a><a href="#ja-first-launch" title="はじめて使うとき">7</a><a href="#ja-uninstall" title="アプリの消し方">8</a><a href="#ja-thanks" title="お礼・商標">9</a></nav>
+<div class="track" id="ja-about">
+  <div class="thead"><span class="dot"></span><b>Track 1 — DaruGoro とは</b><span>About</span></div>
   <div class="lane">
-    <p class="lead">DaruGoro（だるごろ）は、PS5（DualSense）コントローラーを Mac の DAW コントローラーにするアプリです。ボタンを押すと、前面にある DAW（Logic Pro / Studio One）に合わせて割り当てたキーボードショートカットを送ります。デスクに向かわず、ソファでくつろいだまま、再生・録音・編集・ミックスができます。</p>
-    <div class="region"><b>DAWごとのプリセット</b><p>Logic Pro と Studio One のプリセットを用意。編集・並べ替え・書き出し・読み込みが自由にできます。</p></div>
-    <div class="region o half"><b>R2でプリセットを切り替え</b><p>R2 を引いたまま右スティックを倒すと、円形のメニューからプリセットを選べます。</p></div>
-    <div class="region o third"><b>L1の編集レイヤー</b><p>L1 を押している間、顔ボタンと十字キーが編集用の操作に切り替わります。</p></div>
-    <div class="region"><b>スティックを好きな役割に</b><p>十字キー・スクロール・マウスカーソル・矢印キーから選べます。</p></div>
-    <div class="region half"><b>タッチパッドでマウス操作</b><p>コントローラーのタッチパッドで、移動・クリック・ドラッグができます。</p></div>
-    <div class="region"><b>操作ヘルプ</b><p>CREATE ボタンで、全部の割り当てをコントローラーの絵の周りに表示します。</p></div>
+    <p class="lead">DaruGoro（だるごろ）は、だるっとゴロゴロくつろぎながら、DualSense(PS5)コントローラでDAW操作を行うことをコンセプトとしたmacOSアプリです。</p>
+    <p class="lead">DaruGoroではボタン割り当てができ、DualSenseコントローラをUSB-CまたはBluetoothで接続後、マウスやキーボード代わりとしてお使いいただけます。</p>
   </div>
 </div>
 
-<div class="track">
-  <div class="thead"><span class="dot"></span><b>Track 2 — 動きを見る</b><span>GIF</span></div>
+<div class="track" id="ja-for">
+  <div class="thead"><span class="dot"></span><b>Track 2 — こんな方におすすめ</b><span>For you</span></div>
   <div class="lane">
-    <figure><img src="images/darugoro-help.gif" width="760" height="404" loading="lazy" alt="操作ヘルプ。右スティックを倒すと、光る項目がボタンからボタンへ移っていく。"><figcaption>操作ヘルプ。スティックを倒すと、そのボタンの操作が光ります。</figcaption></figure>
-    <figure class="nob"><img src="images/darugoro-radial.gif" width="420" height="420" loading="lazy" alt="プリセットの円。R2 を引いて右スティックで選び、R2 を離すと切り替わる。"><figcaption>R2 を引いて右スティックを回し、プリセットを切り替えます。</figcaption></figure>
-    <figure><img src="images/darugoro-cards.gif" width="760" height="573" loading="lazy" alt="設定ウインドウ。ボタンを選ぶと、そのキーと修飾キーと役割が下に出る。"><figcaption>設定ウインドウでボタンを選ぶと、キーを変えられます。</figcaption></figure>
+    <ul class="req"><li>楽器を構えたまま、デスクに戻らず録音したい方</li><li>コントローラを拡張デバイスとして使いたい方</li><li>キーボード自体に嫌気が差した方</li></ul>
   </div>
 </div>
 
-<div class="track">
-  <div class="thead"><span class="dot s"></span><b>Track 3 — 動作環境</b><span>Requirements</span></div>
+<div class="track" id="ja-features">
+  <div class="thead"><span class="dot"></span><b>Track 3 — 特長</b><span>Logic Pro / Studio One</span></div>
+  <div class="lane">
+    <div class="region"><b>DAWアプリごとのプリセット</b><p>アプリごとにプリセットを用意できます。自分の好きなボタン配置を選べ、設定ファイルのインポート/エクスポートもできます。</p></div>
+    <div class="region half"><b>スティックを好きな役割に</b><p>十字キー(ゲームパッドの十字と同じ動作)・スクロール・マウスカーソル・矢印キーを選べます。</p></div>
+    <div class="region third"><b>タッチパッドでマウス操作</b><p>DualSenseのタッチパッドで、マウス移動・タップクリック・ドラッグ・Forceクリックができます。</p></div>
+    <div class="region o"><b>プリセット切替</b><p>プリセット切替ボタン(デフォルト:R2)でプリセット一覧が円形のメニューで表示されスティック操作でプリセットを簡単に切り替えられます。</p></div>
+    <div class="region o half"><b>レイヤー切り替え</b><p>レイヤー切り替えボタン(デフォルト:L1)を押している間のボタン割り当てできるため、割り当てを拡張できます。</p></div>
+    <div class="region"><b>操作ヘルプ</b><p>ヘルプボタン(デフォルト:CREATE)で全ての割り当てをコントローラーの絵の周りに表示します。</p></div>
+  </div>
+</div>
+
+<div class="track" id="ja-motion">
+  <div class="thead"><span class="dot"></span><b>Track 4 — 動きを見る</b><span>GIF</span></div>
+  <div class="lane">
+    <figure><img src="images/darugoro-help.gif" width="760" height="404" loading="lazy" alt="操作ヘルプ。右スティックを倒すと、光る項目がボタンからボタンへ移っていく。"><figcaption>操作ヘルプ。ヘルプボタン(CREATE)で開き、右スティックを倒すと、そのボタンの操作が光ります。</figcaption></figure>
+    <figure class="nob"><img src="images/darugoro-radial.gif" width="420" height="420" loading="lazy" alt="プリセットの円。プリセット切替ボタン(R2)を押したまま右スティックで選び、離すと切り替わる。"><figcaption>プリセット切替ボタン(R2)を押したまま右スティックで選び、離すとプリセットが切り替わります。</figcaption></figure>
+    <figure><img src="images/darugoro-cards.gif" width="760" height="573" loading="lazy" alt="設定ウインドウ。ボタンを選ぶと、そのキーと修飾キーと役割が下に出る。"><figcaption>設定ウインドウでボタンを選ぶと、割り当てるキーを変えられます。</figcaption></figure>
+  </div>
+</div>
+
+<div class="track" id="ja-req">
+  <div class="thead"><span class="dot s"></span><b>Track 5 — 動作環境</b><span>Requirements</span></div>
   <div class="lane">
     <ul class="req"><li>macOS 12 Monterey 以降</li><li>PS5 DualSense ワイヤレスコントローラー（Bluetooth または USB）</li><li>Logic Pro または Studio One（その他のアプリは「デフォルト」のプリセットで動きます）</li></ul>
   </div>
 </div>
 
-<div class="track">
-  <div class="thead"><span class="dot m"></span><b>Track 4 — ダウンロード</b><span>Free</span></div>
+<div class="track" id="ja-download">
+  <div class="thead"><span class="dot m"></span><b>Track 6 — ダウンロード</b><span>Free</span></div>
   <div class="lane dl">
     <div class="region m"><b>DaruGoro は無料です</b><p>Developer ID で署名し、Apple の公証を受けています。</p></div>
     <a class="btn mint" href="https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg">DaruGoro をダウンロード（.dmg）</a>
@@ -147,7 +165,7 @@ footer a{color:var(--muted)}
 </div>
 
 <div class="track" id="ja-first-launch">
-  <div class="thead"><span class="dot o"></span><b>Track 5 — はじめて使うとき</b><span>4 steps</span></div>
+  <div class="thead"><span class="dot o"></span><b>Track 7 — はじめて使うとき</b><span>4 steps</span></div>
   <div class="lane">
     <ol class="steps">
       <li><div><p><b>コントローラーをつなぐ。</b>PS ボタンと CREATE ボタンを同時に長押しし、ライトバーが点滅したら、<span class="path">システム設定 › Bluetooth</span> で「DualSense Wireless Controller」に接続します。USB ケーブルでもつなげます。</p></div></li>
@@ -159,7 +177,7 @@ footer a{color:var(--muted)}
 </div>
 
 <div class="track" id="ja-uninstall">
-  <div class="thead"><span class="dot o"></span><b>Track 6 — アプリの消し方</b><span>Uninstall</span></div>
+  <div class="thead"><span class="dot o"></span><b>Track 8 — アプリの消し方</b><span>Uninstall</span></div>
   <div class="lane">
     <p class="lead">DaruGoro.app をゴミ箱に入れるだけなら、プリセットや設定は Mac に残ります。入れ直すと、そのまま戻ります。すべて消したいときは、次のようにします。</p>
     <ol class="steps">
@@ -185,51 +203,64 @@ footer a{color:var(--muted)}
   </div>
 </div>
 
-<div class="track">
-  <div class="thead"><span class="dot m"></span><b>Track 7 — お礼・商標</b><span>Thanks / Trademarks</span></div>
+<div class="track" id="ja-thanks">
+  <div class="thead"><span class="dot m"></span><b>Track 9 — お礼・商標</b><span>Thanks / Trademarks</span></div>
   <div class="lane">
     <div class="region s"><b>お礼について</b><p>DaruGoroは無料です。もし役に立ったら、Ko-fi でお礼を送っていただけると嬉しいです。これからの開発の励みになります。送らなくても、すべての機能を使えます。返信や返礼はありません。</p></div>
     <p style="margin:0"><a href="https://ko-fi.com/amam335345" target="_blank" rel="noopener">Ko-fi でお礼を送る →</a></p>
-    <p class="tm"><b>商標について。</b>DualSense、PlayStation および PS5 は Sony Interactive Entertainment Inc. の、Logic Pro は Apple Inc. の商標または登録商標です。DaruGoro はこれらの企業と提携しておらず、承認も受けていません。</p>
+    <p class="tm"><b>商標について。</b>DualSense、PlayStation および PS5 は Sony Interactive Entertainment Inc. の、Logic Pro は Apple Inc. の、Studio One は PreSonus Audio Electronics, Inc. の商標または登録商標です。DaruGoro はこれらの企業と提携しておらず、承認も受けていません。</p>
   </div>
 </div>
 </div>
-
-<div class="ruler" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div>
 
 <!-- ================= English ================= -->
 <div id="english" lang="en">
-<div class="track">
-  <div class="thead"><span class="dot"></span><b>Track 1 — What it does</b><span>Logic Pro / Studio One</span></div>
+<nav class="ruler" aria-label="Jump to a track"><a href="#en-about" title="What is DaruGoro?">1</a><a href="#en-for" title="Who it’s for">2</a><a href="#en-features" title="Features">3</a><a href="#en-motion" title="In motion">4</a><a href="#en-req" title="Requirements">5</a><a href="#download" title="Download">6</a><a href="#en-first-launch" title="First launch">7</a><a href="#en-uninstall" title="Uninstalling">8</a><a href="#en-thanks" title="Say thanks / Trademarks">9</a></nav>
+<div class="track" id="en-about">
+  <div class="thead"><span class="dot"></span><b>Track 1 — What is DaruGoro?</b><span>About</span></div>
   <div class="lane">
-    <p class="lead">DaruGoro turns a PS5 (DualSense) controller into a controller for your DAW on Mac. Press a button and DaruGoro sends the keyboard shortcut you assigned for the app in front — Logic Pro or Studio One — so you can play, record, edit and mix without sitting at your desk.</p>
-    <div class="region"><b>Presets per DAW</b><p>Ready-made presets for Logic Pro and Studio One. Edit, reorder, export and import them freely.</p></div>
-    <div class="region o half"><b>Switch presets with R2</b><p>Hold R2 and tilt the right stick to pick a preset from a circular menu.</p></div>
-    <div class="region o third"><b>L1 editing layer</b><p>While L1 is held, the face buttons and D-pad switch to editing actions.</p></div>
-    <div class="region"><b>Sticks, your way</b><p>Use each stick as a D-pad, scroll wheel, mouse cursor or arrow keys.</p></div>
-    <div class="region half"><b>Touchpad mouse</b><p>Move, click and drag with the controller's touchpad.</p></div>
-    <div class="region"><b>On-screen help</b><p>Press CREATE to see every assignment drawn around the controller.</p></div>
+    <p class="lead">DaruGoro is a macOS app built around one idea: lounging around lazily while you run your DAW with a DualSense (PS5) controller.</p>
+    <p class="lead">You can assign actions to the buttons. Connect a DualSense controller over USB-C or Bluetooth, and use it in place of your mouse and keyboard.</p>
   </div>
 </div>
 
-<div class="track">
-  <div class="thead"><span class="dot"></span><b>Track 2 — In motion</b><span>GIF</span></div>
+<div class="track" id="en-for">
+  <div class="thead"><span class="dot"></span><b>Track 2 — Who it’s for</b><span>For you</span></div>
   <div class="lane">
-    <figure><img src="images/darugoro-help.gif" width="760" height="404" loading="lazy" alt="On-screen help: tilting the right stick moves the highlight from one button's action to the next."><figcaption>On-screen help — tilt a stick to light up what each button does.</figcaption></figure>
-    <figure class="nob"><img src="images/darugoro-radial.gif" width="420" height="420" loading="lazy" alt="Preset menu: hold R2, turn the right stick to pick a preset, release R2 to switch."><figcaption>Hold R2 and turn the right stick to switch presets.</figcaption></figure>
-    <figure><img src="images/darugoro-cards.gif" width="760" height="573" loading="lazy" alt="Settings window: selecting a button shows its key, modifiers and role below."><figcaption>Pick a button in the settings window to change its key. (Screenshots are from the Japanese UI.)</figcaption></figure>
+    <ul class="req"><li>Anyone who wants to record with an instrument in hand, without going back to the desk</li><li>Anyone who wants to use a controller as an extra input device</li><li>Anyone who has simply had enough of the keyboard</li></ul>
   </div>
 </div>
 
-<div class="track">
-  <div class="thead"><span class="dot s"></span><b>Track 3 — Requirements</b><span>macOS 12+</span></div>
+<div class="track" id="en-features">
+  <div class="thead"><span class="dot"></span><b>Track 3 — Features</b><span>Logic Pro / Studio One</span></div>
+  <div class="lane">
+    <div class="region"><b>Presets for each DAW</b><p>Keep presets for each app. Pick the button layout you like, and import or export your settings file.</p></div>
+    <div class="region half"><b>Sticks, your way</b><p>Choose D-pad (works like a gamepad's D-pad), scroll, mouse cursor or arrow keys.</p></div>
+    <div class="region third"><b>Touchpad mouse</b><p>Move the mouse, tap to click, drag and Force Click with the DualSense touchpad.</p></div>
+    <div class="region o"><b>Preset switching</b><p>Press the preset button (default: R2) to show your presets in a circular menu, and switch between them easily with the stick.</p></div>
+    <div class="region o half"><b>Layer switching</b><p>While the layer button (default: L1) is held, the buttons use a second set of assignments, so you can assign more actions.</p></div>
+    <div class="region"><b>On-screen help</b><p>Press the help button (default: CREATE) to see every assignment drawn around the controller.</p></div>
+  </div>
+</div>
+
+<div class="track" id="en-motion">
+  <div class="thead"><span class="dot"></span><b>Track 4 — In motion</b><span>GIF</span></div>
+  <div class="lane">
+    <figure><img src="images/darugoro-help.gif" width="760" height="404" loading="lazy" alt="On-screen help: tilting the right stick moves the highlight from one button's action to the next."><figcaption>On-screen help. Open it with the help button (CREATE), then tilt the right stick to light up what each button does.</figcaption></figure>
+    <figure class="nob"><img src="images/darugoro-radial.gif" width="420" height="420" loading="lazy" alt="Preset menu: hold the preset button (R2), pick a preset with the right stick, release to switch."><figcaption>Hold the preset button (R2), pick with the right stick, and release to switch presets.</figcaption></figure>
+    <figure><img src="images/darugoro-cards.gif" width="760" height="573" loading="lazy" alt="Settings window: selecting a button shows its key, modifiers and role below."><figcaption>Pick a button in the settings window to change the key it sends.</figcaption></figure>
+  </div>
+</div>
+
+<div class="track" id="en-req">
+  <div class="thead"><span class="dot s"></span><b>Track 5 — Requirements</b><span>macOS 12+</span></div>
   <div class="lane">
     <ul class="req"><li>macOS 12 Monterey or later</li><li>A PS5 DualSense wireless controller (Bluetooth or USB)</li><li>Logic Pro or Studio One (other apps work with the “Default” preset)</li></ul>
   </div>
 </div>
 
 <div class="track" id="download">
-  <div class="thead"><span class="dot m"></span><b>Track 4 — Download</b><span>Free</span></div>
+  <div class="thead"><span class="dot m"></span><b>Track 6 — Download</b><span>Free</span></div>
   <div class="lane dl">
     <div class="region m"><b>DaruGoro is free</b><p>The app is signed with a Developer ID and notarized by Apple.</p></div>
     <a class="btn mint" href="https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg">Download DaruGoro (.dmg)</a>
@@ -243,7 +274,7 @@ footer a{color:var(--muted)}
 </div>
 
 <div class="track" id="en-first-launch">
-  <div class="thead"><span class="dot o"></span><b>Track 5 — First launch</b><span>4 steps</span></div>
+  <div class="thead"><span class="dot o"></span><b>Track 7 — First launch</b><span>4 steps</span></div>
   <div class="lane">
     <ol class="steps">
       <li><div><p><b>Connect the controller.</b> Hold the PS button and the CREATE button together until the light bar flashes, then connect “DualSense Wireless Controller” in <span class="path">System Settings › Bluetooth</span>. A USB cable also works.</p></div></li>
@@ -255,7 +286,7 @@ footer a{color:var(--muted)}
 </div>
 
 <div class="track" id="en-uninstall">
-  <div class="thead"><span class="dot o"></span><b>Track 6 — Uninstalling</b><span>Remove</span></div>
+  <div class="thead"><span class="dot o"></span><b>Track 8 — Uninstalling</b><span>Remove</span></div>
   <div class="lane">
     <p class="lead">If you only move DaruGoro.app to the Trash, your presets and settings stay on your Mac, and they come back when you install it again. To remove everything:</p>
     <ol class="steps">
@@ -281,17 +312,17 @@ footer a{color:var(--muted)}
   </div>
 </div>
 
-<div class="track">
-  <div class="thead"><span class="dot m"></span><b>Track 7 — Say thanks / Trademarks</b><span>Ko-fi</span></div>
+<div class="track" id="en-thanks">
+  <div class="thead"><span class="dot m"></span><b>Track 9 — Say thanks / Trademarks</b><span>Ko-fi</span></div>
   <div class="lane">
     <div class="region s"><b>Say thanks</b><p>DaruGoro is free. If it helps you, I'd be glad if you sent a thank-you on Ko-fi. It would encourage me to keep developing the app. Every feature works even if you don't. There are no replies or rewards.</p></div>
     <p style="margin:0"><a href="https://ko-fi.com/amam335345" target="_blank" rel="noopener">Say thanks on Ko-fi →</a></p>
-    <p class="tm"><b>Trademarks.</b> DualSense, PlayStation and PS5 are trademarks or registered trademarks of Sony Interactive Entertainment Inc., and Logic Pro is a trademark or registered trademark of Apple Inc. DaruGoro is not affiliated with, nor endorsed by, these companies.</p>
+    <p class="tm"><b>Trademarks.</b> DualSense, PlayStation and PS5 are trademarks or registered trademarks of Sony Interactive Entertainment Inc., Logic Pro is a trademark or registered trademark of Apple Inc., and Studio One is a trademark or registered trademark of PreSonus Audio Electronics, Inc. DaruGoro is not affiliated with, nor endorsed by, these companies.</p>
   </div>
 </div>
 </div>
 
-<footer lang="en"><span>© 2026 amam</span><a href="https://github.com/amam335345/darugoro-site/releases">Releases</a><span>DaruGoro is an independent app, not affiliated with Sony Interactive Entertainment or Apple.</span></footer>
+<footer lang="en"><span>© 2026 amam</span><a href="https://github.com/amam335345/darugoro-site/releases">Releases</a><span>DaruGoro is an independent app, not affiliated with Sony Interactive Entertainment, Apple or PreSonus.</span></footer>
 </div>
 <div class="bottombar"><span>無料 · macOS 12+</span><a class="btn mint" href="https://github.com/amam335345/darugoro-site/releases/latest/download/DaruGoro.dmg">Download</a></div>
 <script>
@@ -304,6 +335,21 @@ footer a{color:var(--muted)}
         setTimeout(function () { button.textContent = label; }, 1600);
       });
     });
+  });
+  // 目盛り: 今見ているトラックの番号を光らせる
+  document.querySelectorAll('.ruler').forEach(function (ruler) {
+    var links = Array.prototype.slice.call(ruler.querySelectorAll('a'));
+    var targets = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    function update() {
+      var current = -1;
+      targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top < window.innerHeight * 0.4) current = i; });
+      var last = targets[targets.length - 1];
+      if (last && last.getBoundingClientRect().bottom < 0) current = -1;
+      links.forEach(function (a, i) { a.classList.toggle('on', i === current); });
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
   });
 </script>
 </body></html>
