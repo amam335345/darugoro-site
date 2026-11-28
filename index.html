@@ -75,6 +75,10 @@ html.hero-en .hero [data-hero="ja"],html:not(.hero-en) .hero [data-hero="en"]{di
 .region.o{background:#323d58;border-color:#4a5d8a}
 .region.m{background:#30473f;border-color:#3f6656}
 .region.s{background:var(--slate);border-color:#4c5268}
+/* 特長: 地は1色、左の縁だけ ミント・青 の交互 */
+#ja-features .region,#en-features .region{background:var(--slate);border-color:#4c5268;border-left:6px solid var(--mint)}
+#ja-features .region.o,#en-features .region.o{border-left-color:var(--layer)}
+#ja-features .region p,#en-features .region p{color:#d6d9e3}
 .region b{display:block;font-size:15.5px;margin-bottom:2px}
 .region p{margin:0;font-size:14.5px;color:#d9e6df}
 .region.o p{color:#d8e0f2}.region.s p{color:#d6d9e3}
