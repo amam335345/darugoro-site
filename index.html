@@ -78,6 +78,7 @@ html.hero-en .hero [data-hero="ja"],html:not(.hero-en) .hero [data-hero="en"]{di
 #ja-features .region,#en-features .region{background:var(--slate);border-color:#4c5268;border-left:6px solid var(--mint)}
 #ja-features .region.o,#en-features .region.o{border-left-color:var(--layer)}
 #ja-features .region p,#en-features .region p{color:#d6d9e3}
+.region img.feat{margin-top:12px;border-radius:8px;border:2px solid #4c5268;width:100%}
 .region b{display:block;font-size:15.5px;margin-bottom:2px}
 .region p{margin:0;font-size:14.5px;color:#d9e6df}
 .region.o p{color:#d8e0f2}.region.s p{color:#d6d9e3}
@@ -150,12 +151,12 @@ footer a{color:var(--muted)}
 <div class="track" id="ja-features">
   <div class="thead"><span class="dot"></span><b>Track 3 — 特長</b><span>Logic Pro / Studio One</span></div>
   <div class="lane">
-    <div class="region"><b>DAWアプリごとのプリセット</b><p>アプリごとにプリセットを用意できます。自分の好きなボタン配置を選べ、設定ファイルのインポート/エクスポートもできます。</p></div>
-    <div class="region o"><b>スティックを好きな役割に</b><p>十字キー(ゲームパッドの十字と同じ動作)・スクロール・マウスカーソル・矢印キーを選べます。</p></div>
-    <div class="region"><b>タッチパッドでマウス操作</b><p>DualSenseのタッチパッドで、マウス移動・タップクリック・ドラッグ・Forceクリックができます。</p></div>
-    <div class="region o"><b>プリセット切替</b><p>プリセット切替ボタン(デフォルト:R2)でプリセット一覧が円形のメニューで表示されスティック操作でプリセットを簡単に切り替えられます。</p></div>
-    <div class="region"><b>レイヤー切り替え</b><p>レイヤー切り替えボタン(デフォルト:L1)を押している間のボタン割り当てできるため、割り当てを拡張できます。</p></div>
-    <div class="region o"><b>操作ヘルプ</b><p>ヘルプボタン(デフォルト:CREATE)で全ての割り当てをコントローラーの絵の周りに表示します。</p></div>
+    <div class="region"><b>DAWアプリごとのプリセット</b><p>アプリごとにプリセットを用意できます。自分の好きなボタン配置を選べ、設定ファイルのインポート/エクスポートもできます。</p><img class="feat" src="images/feature-presets.png" alt="メインウインドウ。左のプリセット一覧を枠で囲んでいる。" loading="lazy"></div>
+    <div class="region o"><b>スティックを好きな役割に</b><p>十字キー(ゲームパッドの十字と同じ動作)・スクロール・マウスカーソル・矢印キーを選べます。</p><img class="feat" src="images/feature-sticks.png" alt="メインウインドウ。左右のスティックの札とスティックを枠で囲み、役割を選ぶ欄を重ねている。" loading="lazy"></div>
+    <div class="region"><b>タッチパッドでマウス操作</b><p>DualSenseのタッチパッドで、マウス移動・タップクリック・ドラッグ・Forceクリックができます。</p><img class="feat" src="images/feature-touchpad.png" alt="操作ヘルプ。タッチパッドの操作の一覧を枠で囲んでいる。" loading="lazy"></div>
+    <div class="region o"><b>プリセット切替</b><p>プリセット切替ボタン(デフォルト:R2)でプリセット一覧が円形のメニューで表示されスティック操作でプリセットを簡単に切り替えられます。</p><img class="feat" src="images/feature-radial.png" alt="メインウインドウにプリセットの円を重ね、R2 の札を枠で囲んでいる。" loading="lazy"></div>
+    <div class="region"><b>レイヤー切り替え</b><p>レイヤー切り替えボタン(デフォルト:L1)を押している間のボタン割り当てできるため、割り当てを拡張できます。</p><img class="feat" src="images/feature-layer.gif" alt="メインウインドウ。「通常」と「L1 を押している間」を切り替えると、L1 の札とボタンの割り当てが入れ替わる。" loading="lazy"></div>
+    <div class="region o"><b>操作ヘルプ</b><p>ヘルプボタン(デフォルト:CREATE)で全ての割り当てをコントローラーの絵の周りに表示します。</p><img class="feat" src="images/feature-help.png" alt="操作ヘルプ。CREATE の札を枠で囲んでいる。" loading="lazy"></div>
   </div>
 </div>
 
@@ -259,12 +260,12 @@ footer a{color:var(--muted)}
 <div class="track" id="en-features">
   <div class="thead"><span class="dot"></span><b>Track 3 — Features</b><span>Logic Pro / Studio One</span></div>
   <div class="lane">
-    <div class="region"><b>Presets for each DAW</b><p>Keep presets for each app. Pick the button layout you like, and import or export your settings file.</p></div>
-    <div class="region o"><b>Sticks, your way</b><p>Choose D-pad (works like a gamepad's D-pad), scroll, mouse cursor or arrow keys.</p></div>
-    <div class="region"><b>Touchpad mouse</b><p>Move the mouse, tap to click, drag and Force Click with the DualSense touchpad.</p></div>
-    <div class="region o"><b>Preset switching</b><p>Press the preset button (default: R2) to show your presets in a circular menu, and switch between them easily with the stick.</p></div>
-    <div class="region"><b>Layer switching</b><p>While the layer button (default: L1) is held, the buttons use a second set of assignments, so you can assign more actions.</p></div>
-    <div class="region o"><b>On-screen help</b><p>Press the help button (default: CREATE) to see every assignment drawn around the controller.</p></div>
+    <div class="region"><b>Presets for each DAW</b><p>Keep presets for each app. Pick the button layout you like, and import or export your settings file.</p><img class="feat" src="images/feature-presets.png" alt="Main window with the preset list on the left outlined." loading="lazy"></div>
+    <div class="region o"><b>Sticks, your way</b><p>Choose D-pad (works like a gamepad's D-pad), scroll, mouse cursor or arrow keys.</p><img class="feat" src="images/feature-sticks.png" alt="Main window with both stick labels and sticks outlined, and the role menu shown." loading="lazy"></div>
+    <div class="region"><b>Touchpad mouse</b><p>Move the mouse, tap to click, drag and Force Click with the DualSense touchpad.</p><img class="feat" src="images/feature-touchpad.png" alt="On-screen help with the touchpad gesture list outlined." loading="lazy"></div>
+    <div class="region o"><b>Preset switching</b><p>Press the preset button (default: R2) to show your presets in a circular menu, and switch between them easily with the stick.</p><img class="feat" src="images/feature-radial.png" alt="Preset menu over the main window, with the R2 label outlined." loading="lazy"></div>
+    <div class="region"><b>Layer switching</b><p>While the layer button (default: L1) is held, the buttons use a second set of assignments, so you can assign more actions.</p><img class="feat" src="images/feature-layer.gif" alt="Main window switching between the normal page and the "while L1 is held" page; the L1 label and the assignments change." loading="lazy"></div>
+    <div class="region o"><b>On-screen help</b><p>Press the help button (default: CREATE) to see every assignment drawn around the controller.</p><img class="feat" src="images/feature-help.png" alt="On-screen help with the CREATE label outlined." loading="lazy"></div>
   </div>
 </div>
 

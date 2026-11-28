@@ -45,19 +45,51 @@ DaruGoroではボタン割り当てができ、DualSenseコントローラをUSB
 ### 特長
 
 - **DAWアプリごとのプリセット** — アプリごとにプリセットを用意できます。自分の好きなボタン配置を選べ、設定ファイルのインポート/エクスポートもできます。
+
+<p align="center">
+  <img src="images/feature-presets.png" width="760" alt="メインウインドウ。左のプリセット一覧を枠で囲んでいる。">
+</p>
+
 - **スティックを好きな役割に** — 十字キー(ゲームパッドの十字と同じ動作)・スクロール・マウスカーソル・矢印キーを選べます。
+
+<p align="center">
+  <img src="images/feature-sticks.png" width="760" alt="メインウインドウ。左右のスティックの札とスティックを枠で囲み、役割を選ぶ欄を重ねている。">
+</p>
+
 - **タッチパッドでマウス操作** — DualSenseのタッチパッドで、マウス移動・タップクリック・ドラッグ・Forceクリックができます。
+
+<p align="center">
+  <img src="images/feature-touchpad.png" width="760" alt="操作ヘルプ。タッチパッドの操作の一覧を枠で囲んでいる。">
+</p>
+
+- **プリセット切替** — プリセット切替ボタン(デフォルト:R2)でプリセット一覧が円形のメニューで表示されスティック操作でプリセットを簡単に切り替えられます。
+
+<p align="center">
+  <img src="images/feature-radial.png" width="760" alt="メインウインドウにプリセットの円を重ね、R2 の札を枠で囲んでいる。">
+</p>
+
+- **レイヤー切り替え** — レイヤー切り替えボタン(デフォルト:L1)を押している間のボタン割り当てできるため、割り当てを拡張できます。
+
+<p align="center">
+  <img src="images/feature-layer.gif" width="760" alt="メインウインドウ。「通常」と「L1 を押している間」を切り替えると、L1 の札とボタンの割り当てが入れ替わる。">
+</p>
+
+- **操作ヘルプ** — ヘルプボタン(デフォルト:CREATE)で全ての割り当てをコントローラーの絵の周りに表示します。
+
+<p align="center">
+  <img src="images/feature-help.png" width="760" alt="操作ヘルプ。CREATE の札を枠で囲んでいる。">
+</p>
+
+### 動きを見る
+
 <p align="center">
   <img src="images/darugoro-cards.gif" width="760" alt="設定ウインドウ。ボタンを選ぶと、そのキーと修飾キーと役割が下に出る。">
 </p>
 
-- **プリセット切替** — プリセット切替ボタン(デフォルト:R2)でプリセット一覧が円形のメニューで表示されスティック操作でプリセットを簡単に切り替えられます。
 <p align="center">
   <img src="images/darugoro-radial.gif" width="480" alt="プリセットの円。R2 を引いて右スティックで選び、R2 を離すと切り替わる。">
 </p>
 
-- **レイヤー切り替え** — レイヤー切り替えボタン(デフォルト:L1)を押している間のボタン割り当てできるため、割り当てを拡張できます。
-- **操作ヘルプ** — ヘルプボタン(デフォルト:CREATE)で全ての割り当てをコントローラーの絵の周りに表示します。
 <p align="center">
   <img src="images/darugoro-help.gif" width="760" alt="操作ヘルプ。右スティックを倒すと、光る項目がボタンからボタンへ移っていく。">
 </p>
@@ -106,19 +138,51 @@ You can assign actions to the buttons. Connect a DualSense controller over USB-C
 ### Features
 
 - **Presets for each DAW** — Keep presets for each app. Pick the button layout you like, and import or export your settings file.
+
+<p align="center">
+  <img src="images/feature-presets.png" width="760" alt="Main window with the preset list on the left outlined.">
+</p>
+
 - **Sticks, your way** — Choose D-pad (works like a gamepad's D-pad), scroll, mouse cursor or arrow keys.
+
+<p align="center">
+  <img src="images/feature-sticks.png" width="760" alt="Main window with both stick labels and sticks outlined, and the role menu shown.">
+</p>
+
 - **Touchpad mouse** — Move the mouse, tap to click, drag and Force Click with the DualSense touchpad.
+
+<p align="center">
+  <img src="images/feature-touchpad.png" width="760" alt="On-screen help with the touchpad gesture list outlined.">
+</p>
+
+- **Preset switching** — Press the preset button (default: R2) to show your presets in a circular menu, and switch between them easily with the stick.
+
+<p align="center">
+  <img src="images/feature-radial.png" width="760" alt="Preset menu over the main window, with the R2 label outlined.">
+</p>
+
+- **Layer switching** — While the layer button (default: L1) is held, the buttons use a second set of assignments, so you can assign more actions.
+
+<p align="center">
+  <img src="images/feature-layer.gif" width="760" alt="Main window switching between the normal page and the "while L1 is held" page; the L1 label and the assignments change.">
+</p>
+
+- **On-screen help** — Press the help button (default: CREATE) to see every assignment drawn around the controller.
+
+<p align="center">
+  <img src="images/feature-help.png" width="760" alt="On-screen help with the CREATE label outlined.">
+</p>
+
+### In motion
+
 <p align="center">
   <img src="images/darugoro-cards.gif" width="760" alt="Settings window: selecting a button shows its key, modifiers and role below.">
 </p>
 
-- **Preset switching** — Press the preset button (default: R2) to show your presets in a circular menu, and switch between them easily with the stick.
 <p align="center">
   <img src="images/darugoro-radial.gif" width="480" alt="Preset menu: hold R2, turn the right stick to pick a preset, release R2 to switch.">
 </p>
 
-- **Layer switching** — While the layer button (default: L1) is held, the buttons use a second set of assignments, so you can assign more actions.
-- **On-screen help** — Press the help button (default: CREATE) to see every assignment drawn around the controller.
 <p align="center">
   <img src="images/darugoro-help.gif" width="760" alt="On-screen help: tilting the right stick moves the highlight from one button's action to the next.">
 </p>
